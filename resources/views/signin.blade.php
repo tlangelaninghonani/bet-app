@@ -15,7 +15,7 @@
 </style>
 <body>
     <div class="header-home">
-        <span class="app-name">BetAssistant</span>
+        <span class="app-name"><span class="font-kanit">Mabuza</span> BetAssistant</span>
     </div>
     <div class="banner-home">
         <img src="https://imgresizer.eurosport.com/unsafe/1280x960/smart/filters:format(jpeg)/origin-imgresizer.eurosport.com/2021/09/26/3226899-66055248-2560-1440.jpg" alt="">
@@ -58,7 +58,11 @@
                     </span>
                 </button>
             </p>
-            <hr>
+            <p>
+                <div class="text-align-center">
+                    <span class="font-kanit-small">Or</span>
+                </div>
+            </p>
             <p>
                 <button class="signin-google" type="button" onclick="submitForm('googleauth')">
                     <img class="google-img" src="https://img.icons8.com/color/48/000000/google-logo.png" alt="">

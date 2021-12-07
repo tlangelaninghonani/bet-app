@@ -24,7 +24,7 @@
     </span>-->
     <div class="header-fixtures">
         <div class="display-flex-space-between">
-            <span class="app-name">BetAssistant</span>
+            <span class="app-name"><span class="font-kanit">Mabuza</span> BetAssistant</span>
             <span class="material-icons-round">
             more_vert
             </span>
@@ -306,7 +306,7 @@
                                 <div class="club-logo truncate">
                                     <span >{{ $fixture->first_team }} {{ $fixture->first_team_odds }}</span><br>
                                 </div>
-                                <span class="font-kanit-small">VS</span>
+                                <span class="font-kanit-small">V</span>
                                 <div class="club-logo truncate">
                                     <span>{{ $fixture->second_team }} {{ $fixture->second_team_odds }}</span>
                                 </div>

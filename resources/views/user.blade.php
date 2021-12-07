@@ -64,7 +64,7 @@
     <div class="container">
         <div class="card">
             <div>
-                <span class="title-mid">{{ $banking->bank_name }}</span><br><br>
+                <span class="title">{{ $banking->bank_name }}</span><br><br>
                 <div class="display-flex-space-between">
                     <div>
                         <span class="title-small">{{ $banking->account_holder }}</span><br>

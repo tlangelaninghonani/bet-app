@@ -39,7 +39,7 @@
     </div>
     <div class="header-fixtures">
         <div class="display-flex-space-between">
-            <span class="app-name">BetAssistant</span>
+            <span class="app-name"><span class="font-kanit">Mabuza</span> BetAssistant</span>
             <span class="material-icons-round" onclick="showHide('menu')">
             more_vert
             </span>
@@ -156,7 +156,7 @@
                                     <div class="club-logo truncate">
                                         <span>{{ $fixture->first_team }} {{ $fixture->first_team_odds }}</span>
                                     </div>
-                                    <span class="font-kanit-small">VS</span>
+                                    <span class="font-kanit-small">V</span>
                                     <div class="club-logo truncate">
                                         <span>{{ $fixture->second_team }} {{ $fixture->second_team_odds }}</span>
                                     </div>
@@ -186,7 +186,7 @@
                 <span class="material-icons-round">
                     warning
                     </span>
-                <span>Please note, <span class="font-kanit">BetAssistant</span> will not be <span class="title">responsible</span> for any losing bet slip</span>
+                    <span>Please note, <span class="app-name"><span class="font-kanit">Mabuza</span> BetAssistant</span>  will not be responsible for any losing bet slip, bet on your <span class="font-kanit-small">own risk</span></span>
                 </div>
             </p>
         @else

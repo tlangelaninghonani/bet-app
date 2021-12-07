@@ -46,7 +46,7 @@
     </div>
     <div class="header">
         <div class="display-flex-space-between">
-            <span class="app-name">BetAssistant</span>
+            <span class="app-name"><span class="font-kanit">Mabuza</span> BetAssistant</span>
             <span class="material-icons-round" onclick="showHide('menu')">
             more_vert
             </span>

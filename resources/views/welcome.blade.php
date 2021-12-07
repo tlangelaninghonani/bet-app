@@ -12,19 +12,10 @@
     .header{
         background-color: transparent;
     }
-    body{
-        
-    }
 </style>
 <body>
     <div class="header-home">
-        <span class="app-name">BetAssistant</span>
-        <div class="display-flex-align" onclick="redirect('/signin')">
-            <span class="material-icons-round">
-            account_circle
-            </span>
-            <span class="app-name">Sign in</span>
-        </div>
+        <span class="app-name"><span class="font-kanit">Mabuza</span> BetAssistant</span>
     </div>
     <div class="banner-home">
         <img src="https://www.unitedinfocus.com/static/uploads/14/2021/10/GettyImages-1347758654-768x506.jpg" alt="">

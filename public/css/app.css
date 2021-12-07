@@ -2,11 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@800&display=swap');
 body{
     background-color: black;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     overflow: auto;
     margin: 0;
 }
@@ -289,14 +284,14 @@ input:-webkit-autofill {
 
 .curved-top-home{
     background-color: white;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
     padding: var(--padding);
-    overflow: auto;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
+    z-index: 5000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: -40px;
 }
 
 .title-mid{
@@ -447,11 +442,7 @@ img{
 }
 
 .banner-home{
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    height: 500px;
 }
 
 .banner-home img{
@@ -632,6 +623,8 @@ button *{
     background-color: black;
     border-radius: 15px;
     padding: var(--padding);
+    margin-left: -20px;
+    margin-right: -20px;
 }
 
 .card *{
@@ -648,8 +641,8 @@ button *{
 }
 
 .fixtures{
-    margin-left: -23px !important;
-    margin-right: -23px !important;
+    margin-left: -20px !important;
+    margin-right: -20px !important;
     padding: var(--padding);
     background-color: black;
     border-radius: 15px;

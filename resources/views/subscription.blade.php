@@ -35,7 +35,7 @@
     </div>
     <div class="header-fixtures">
         <div class="display-flex-space-between">
-            <span class="app-name">BetAssistant</span>
+            <span class="app-name"><span class="font-kanit">Mabuza</span> BetAssistant</span>
             <span class="material-icons-round" onclick="showHide('menu')">
             more_vert
             </span>
@@ -100,13 +100,13 @@
             <div>
                 <span>We are working on making <span class="font-kanit">payments</span> easier with <span class="font-kanit">online payment</span> platform</span>
                 <p>
-                    <span><span class="title">Alternatively</span>, recharge your account using <span class="font-kanit">bank</span> information below, use your <span class="title">account number</span> as a reference</span>
+                    <span><span class="title">Alternatively</span>, recharge your account using our <span class="font-kanit">bank</span> information below, use your <span class="title">account number</span> as a reference</span>
                 </p>
             </div>
         </div>
         <div class="card">
             <div>
-                <span class="title-mid">Capitec Bank Limited</span><br><br>
+                <span class="title">Capitec Bank Limited</span><br><br>
                 <div class="display-flex-space-between">
                     <div>
                         <span class="title-small">MR T NGHONANI</span><br>
@@ -120,6 +120,9 @@
                 </div>
             </div>
         </div>
+        <p>
+            <span>Usually takes 20 minutes to reflect</span>
+        </p>
     </div>
 </body>
 </html>

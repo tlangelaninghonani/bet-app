@@ -19,7 +19,7 @@
             <span class="material-icons-round icon-mid" onclick="redirectBack()">
             arrow_back
             </span>
-            <span class="app-name">BetAssistant</span>
+            <span class="app-name"><span class="font-kanit">Mabuza</span> BetAssistant</span>
         </div>
     </div>
     <div class="banner-home">
@@ -48,7 +48,7 @@
                     <span class="material-icons-sharp">
                     account_circle
                     </span>
-                    <input type="text" name="fullname" placeholder="Enter your Fullname" required>
+                    <input type="text" name="fullname" placeholder="Enter your Full name" required>
                 </div>
             </p>
             <p>
@@ -64,7 +64,7 @@
                     <span class="material-icons-round">
                     email
                     </span>
-                    <input type="email" name="email" placeholder="Enter your email (Optional)" required>
+                    <input type="email" name="email" placeholder="Enter your email - Optional" required>
                 </div>
             </p>
             <p>
@@ -75,7 +75,11 @@
                     </span>
                 </button>
             </p>
-            <hr>
+            <p>
+                <div class="text-align-center">
+                    <span class="font-kanit-small">Or</span>
+                </div>
+            </p>
             <p>
                 <button class="signin-google" type="button" onclick="submitForm('googleauth')">
                     <img class="google-img" src="https://img.icons8.com/color/48/000000/google-logo.png" alt="">

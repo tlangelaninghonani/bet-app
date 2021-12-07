@@ -56,7 +56,7 @@
                     <span class="material-icons-sharp">
                     groups
                     </span>
-                    <input type="text" style="text-transform: capitalize" id="firstteam" name="firstteam" placeholder="First team">
+                    <input type="text" style="text-transform: capitalize" id="firstteam" name="firstteam" placeholder="First team" required>
                     <div class="clear" onclick="clearText('firstteam')">
                         <span>Clear</span>
                     </div>
@@ -70,7 +70,7 @@
                     <span class="material-icons-sharp">
                     groups
                     </span>
-                    <input type="text" style="text-transform: capitalize" id="secondteam" name="secondteam" placeholder="Second team">
+                    <input type="text" style="text-transform: capitalize" id="secondteam" name="secondteam" placeholder="Second team" required>
                     <div class="clear" onclick="clearText('secondteam')">
                         <span>Clear</span>
                     </div>

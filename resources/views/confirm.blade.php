@@ -23,7 +23,7 @@
 <body>
     <div class="header-plain">
         <div class="display-flex-align">
-            <span class="app-name">BetAssistant</span>
+            <span class="app-name"><span class="font-kanit">Mabuza</span> BetAssistant</span>
         </div>
     </div>
     <div class="container">

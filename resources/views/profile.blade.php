@@ -35,7 +35,7 @@
     </div>
     <div class="header-fixtures">
         <div class="display-flex-space-between">
-            <span class="app-name">BetAssistant</span>
+            <span class="app-name"><span class="font-kanit">Mabuza</span> BetAssistant</span>
             <span class="material-icons-round" onclick="showHide('menu')">
             more_vert
             </span>
@@ -110,7 +110,7 @@
         </p>
         <div class="card">
             <div>
-                <span class="title-mid">{{ $banking->bank_name }}</span><br><br>
+                <span class="title">{{ $banking->bank_name }}</span><br><br>
                 <div class="display-flex-space-between">
                     <div>
                         <span class="title-small">{{ $banking->account_holder }}</span><br>
