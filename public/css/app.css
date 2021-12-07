@@ -687,6 +687,8 @@ button *{
     right: 0;
     background-color: black;
     padding: var(--padding);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .header *{
@@ -700,4 +702,6 @@ button *{
     background-color: white;
     padding: var(--padding);
     box-shadow: var(--shadow);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
