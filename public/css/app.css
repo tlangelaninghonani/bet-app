@@ -12,7 +12,7 @@ body{
 
 :root{
     --input-silver: rgb(249, 249, 249);
-    --padding: 20px;
+    --padding: 10px;
     --gap: 10px;
     --shadow-thick: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     --shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
@@ -622,9 +622,7 @@ button *{
 .card{
     background-color: black;
     border-radius: 15px;
-    padding: var(--padding);
-    margin-left: -20px;
-    margin-right: -20px;
+    padding: var(--padding) 20px;
 }
 
 .card *{
@@ -641,9 +639,7 @@ button *{
 }
 
 .fixtures{
-    margin-left: -20px !important;
-    margin-right: -20px !important;
-    padding: var(--padding);
+    padding: var(--padding) 20px;
     background-color: black;
     border-radius: 15px;
 }
@@ -691,8 +687,6 @@ button *{
     right: 0;
     background-color: black;
     padding: var(--padding);
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
 }
 
 .header *{
@@ -705,7 +699,5 @@ button *{
     right: 0;
     background-color: white;
     padding: var(--padding);
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
     box-shadow: var(--shadow);
 }

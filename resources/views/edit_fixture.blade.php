@@ -23,8 +23,6 @@
         right: 0;
         padding: var(--padding);
         background-color: rgba(0, 0, 0, .5);
-        border-bottom-left-radius: 40px;
-        border-bottom-right-radius: 40px;
     }
 
     .fixtures-edit *{
@@ -56,7 +54,7 @@
                             <div class="club-logo truncate">
                                 <span >{{ $fixture->first_team }} {{ $fixture->first_team_odds }}</span><br>
                             </div>
-                            <span class="font-kanit-small">VS</span>
+                            <span class="font-kanit-small">V</span>
                             <div class="club-logo truncate">
                                 <span>{{ $fixture->second_team }} {{ $fixture->second_team_odds }}</span>
                             </div>

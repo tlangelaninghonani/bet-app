@@ -142,9 +142,9 @@
                 <div class="fixtures">
                     <p>
                         <div class="display-flex">
-                            <div class="bet-number">
+                            <!--<div class="bet-number">
                                 <span>{{ $counter++ }}</span>
-                            </div>
+                            </div>-->
                             <div class="fixture-item">
                                 <div class="display-flex-space-between">
                                     <div class="club-logo truncate">
