@@ -714,10 +714,6 @@ button *{
 }
 
 .header{
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
     background-color: black;
     padding: var(--padding);
     border-bottom-left-radius: 15px;
@@ -728,10 +724,6 @@ button *{
     color: white;
 }
 .header-fixtures{
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
     background-color: white;
     padding: var(--padding);
     box-shadow: var(--shadow);

@@ -289,7 +289,7 @@
             </span>
         @endif
         @foreach($fixtures as $fixture)
-            <p>
+    
                 <div class="fixtures">
                     <p>
                         <div class="display-flex">
@@ -349,7 +349,7 @@
                         </div>
                     </p>
                 </div>
-            </p>
+          
         @endforeach
     </div>
 </body>
