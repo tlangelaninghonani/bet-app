@@ -24,7 +24,7 @@
     </div>
     <div class="curved-top-home">
         <div class="display-flex-space-between">
-            <span>Hi <span class="font-kanit">{{ Session::get("name") }}</span>, We still need your <span class="title">phone number</span> for <span class="font-kanit">effectiveness</span></span>
+            <span>Hi <span class="font-kanit">{{ Session::get("name") }}</span>, We need your <span class="title">phone number</span> for <span class="font-kanit">better and fast</span> communication</span>
             <span class="material-icons-sharp icon-fixed">
             call
             </span>
