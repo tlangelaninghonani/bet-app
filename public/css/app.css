@@ -629,7 +629,7 @@ hr{
 }
 
 .icon-big{
-    font-size: 150px !important;
+    font-size: 100px !important;
 }
 
 .icon-big-shadow{
@@ -680,9 +680,11 @@ button *{
 }
 
 .fixtures{
-    padding: 5px 20px;
-    background-color: black;
 
+}
+
+.fixtures *{
+    color: black;
 }
 
 .fixtures-radius-top{
@@ -695,9 +697,6 @@ button *{
     border-bottom-right-radius: 15px;
 }
 
-.fixtures *{
-    color: white;
-}
 
 .container{
     padding: var(--padding);
