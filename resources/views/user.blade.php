@@ -41,7 +41,7 @@
                 </div>
             @endif
             <span>{{ $user->phone_number }}</span><br>
-            <div class="display-flex-align">
+            <!--<div class="display-flex-align">
                 @if($user->state == "trial")
                     <span class="material-icons-round icon-font-small">
                     alarm
@@ -58,7 +58,7 @@
                     </span>
                     <span class="title-small">Unubscribed</span>
                 @endif
-            </div>
+            </div>-->
         </div>
     </div>
     <div class="container">

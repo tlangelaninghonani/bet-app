@@ -72,7 +72,7 @@
         @foreach($accounts::all() as $account)
             <div class="display-flex-align" onclick="redirect('/user/{{ $account->id }}')">
                 <span class="material-icons-round icon-big">
-                account_circle
+                account_box
                 </span>
                 <div class="truncate">
                     <span class="title">{{ $account->full_name }}</span><br>
@@ -82,7 +82,7 @@
                         </div>
                     @endif
                     <span>{{ $account->phone_number }}</span><br>
-                    <div class="display-flex-align">
+                    <!--<div class="display-flex-align">
                         @if($account->state == "trial")
                             <span class="material-icons-round icon-font-small">
                             alarm
@@ -99,7 +99,7 @@
                             </span>
                             <span class="title-small">Unubscribed</span>
                         @endif
-                    </div>
+                    </div>-->
                 </div>
             </div>
         @endforeach
