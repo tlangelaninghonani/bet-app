@@ -59,7 +59,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <!--<div class="container">
         @if($user->state == "trial")
             <div class="display-flex-center">
                 <span>Balance</span>
@@ -116,6 +116,6 @@
         <p>
             <span>Usually takes 20 minutes to reflect</span>
         </p>
-    </div>
+    </div>-->
 </body>
 </html>
