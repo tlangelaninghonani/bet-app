@@ -52,21 +52,52 @@
                 </div>
             </p>
             <p>
-                <div class="input-box">
-                    <span class="material-icons-sharp">
-                    call
-                    </span>
-                    <input type="number" name="phonenumber" maxlength="10" minlength="10" placeholder="Enter your phone number" required>
+                <div class="predictions-centered">
+                    <div class="selected" onclick="swapSignupPhoneEmail(this, 'phone')">
+                        <span>Use phone</span>
+                    </div>
+                     <div onclick="swapSignupPhoneEmail(this, 'email')">
+                        <span>Use email</span>
+                    </div>
                 </div>
             </p>
-            <p>
-                <div class="input-box">
-                    <span class="material-icons-round">
-                    email
-                    </span>
-                    <input type="email" name="email" placeholder="Enter your email - Optional" required>
-                </div>
-            </p>
+            <script>
+                function swapSignupPhoneEmail(self, mode){
+                    document.querySelector("#phone").style.display = "none";
+                    document.querySelector("#email").style.display = "none";
+
+                    if(mode == "phone"){
+                        document.querySelector("#phone").style.display = "block";
+                    }else{
+                        document.querySelector("#email").style.display = "block";
+                    }
+                    for (let i = 0; i < document.querySelectorAll(".selected").length; i++) {
+                        const element = document.querySelectorAll(".selected")[i];
+                        element.classList.remove("selected");
+                    }
+                    self.classList.add("selected");
+                }
+            </script>
+            <div id="phone">
+                <p>
+                    <div class="input-box">
+                        <span class="material-icons-sharp">
+                        call
+                        </span>
+                        <input type="number" name="phonenumber" maxlength="10" minlength="10" placeholder="Enter your phone number">
+                    </div>
+                </p>
+            </div>
+            <div class="display-none" id="email">
+                <p>
+                    <div class="input-box">
+                        <span class="material-icons-round">
+                        email
+                        </span>
+                        <input type="email" name="email" placeholder="Enter your email">
+                    </div>
+                </p>
+            </div>
             <p>
                 <button>
                     <span>Next</span>

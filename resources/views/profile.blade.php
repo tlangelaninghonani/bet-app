@@ -109,20 +109,22 @@
             <span style="padding-left: 18px"><span class="font-kanit-small">Banking</span> information</span>
         </p>
         <div class="card">
-            <div>
-                <span class="title">{{ $banking->bank_name }}</span><br><br>
-                <div class="display-flex-space-between">
-                    <div>
-                        <span class="title-small">{{ $banking->account_holder }}</span><br>
-                        <span class="title-small">{{ $banking->account_number }}</span>
-                    </div>
-                    <div>
-                        <span class="material-icons-round">
-                        memory
-                        </span>
+            <p>
+                <div>
+                    <span class="title">{{ $banking->bank_name }}</span><br><br>
+                    <div class="display-flex-space-between">
+                        <div>
+                            <span class="title-small">{{ $banking->account_holder }}</span><br>
+                            <span class="title-small">{{ $banking->account_number }}</span>
+                        </div>
+                        <div>
+                            <span class="material-icons-round">
+                            memory
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </p>
         </div>
     </div>
 </body>

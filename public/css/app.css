@@ -21,6 +21,7 @@ body{
 *{
     color: white;
     font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
 }
 
 .leagues{
@@ -335,7 +336,7 @@ input:-webkit-autofill {
 }
 
 .new-fixture{
-    padding: 15px;
+    padding: 20px;
     box-shadow: var(--shadow-thick);
     border-radius: 50%;
     position: fixed;
@@ -456,7 +457,7 @@ img{
 }
 
 button{
-    padding: 15px;
+    padding: 16px;
     width: 100%;
     background-color: black;
     display: flex;
@@ -594,7 +595,7 @@ hr{
 .icon-big-shadow{
     font-size: 80px !important;
     box-shadow: var(--shadow);
-    padding: 15px;
+    padding: 30px;
     border-radius: 50%;
 }
 
@@ -622,7 +623,7 @@ button *{
 .card{
     background-color: black;
     border-radius: 15px;
-    padding: var(--padding) 20px;
+    padding: var(--padding) 25px;
 }
 
 .card *{
@@ -639,7 +640,7 @@ button *{
 }
 
 .fixtures{
-    padding: var(--padding) 20px;
+    padding: var(--padding) 25px;
     background-color: black;
     border-radius: 15px;
 }

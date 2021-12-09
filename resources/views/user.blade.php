@@ -63,20 +63,22 @@
     </div>
     <div class="container">
         <div class="card">
-            <div>
-                <span class="title">{{ $banking->bank_name }}</span><br><br>
-                <div class="display-flex-space-between">
-                    <div>
-                        <span class="title-small">{{ $banking->account_holder }}</span><br>
-                        <span class="title-small">{{ $banking->account_number }}</span>
-                    </div>
-                    <div>
-                        <span class="material-icons-round">
-                        memory
-                        </span>
+            <p>
+                <div>
+                    <span class="title">{{ $banking->bank_name }}</span><br><br>
+                    <div class="display-flex-space-between">
+                        <div>
+                            <span class="title-small">{{ $banking->account_holder }}</span><br>
+                            <span class="title-small">{{ $banking->account_number }}</span>
+                        </div>
+                        <div>
+                            <span class="material-icons-round">
+                            memory
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </p>
         </div>
         <hr>
         <form action="/user/{{ $user->id }}/payment/verified" method="POST">
