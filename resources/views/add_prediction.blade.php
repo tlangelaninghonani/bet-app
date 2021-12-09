@@ -60,7 +60,7 @@
                 </div>
                 <p>
                     <div class="display-flex-space-around">
-                        <div class="text-align-center">
+                        <div class="text-align-center truncate">
                             <div class="input-box" style="padding: 0 15px;">
                                 <span class="material-icons-sharp">
                                 groups
@@ -78,7 +78,7 @@
                             </div><br>
                             <span id="drawodds">Draw</span>
                         </div>
-                        <div class="text-align-center">
+                        <div class="text-align-center truncate">
                             <div class="input-box" style="padding: 0 15px;">
                                 <span class="material-icons-sharp">
                                 groups
@@ -132,11 +132,11 @@
                     </div>
                     <p>
                         <div class="display-flex-align">
-                            <div class="predictions-centered">
-                                <div onclick="selectedOutcome(this, 'selected', '{{ Session::get('firstteam') }} win')">
+                            <div class="display-flex-auto">
+                                <div class="truncate" onclick="selectedOutcome(this, 'selected', '{{ Session::get('firstteam') }} win')">
                                     <span>{{ Session::get("firstteam") }} win</span>
                                 </div>
-                                <div onclick="selectedOutcome(this, 'selected', '{{ Session::get('secondteam') }} win')"> 
+                                <div class="truncate" onclick="selectedOutcome(this, 'selected', '{{ Session::get('secondteam') }} win')"> 
                                     <span>{{ Session::get("secondteam") }} win</span>
                                 </div>
                             </div>
