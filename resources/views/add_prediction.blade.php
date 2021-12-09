@@ -23,6 +23,8 @@
         right: 0;
         padding: var(--padding);
         background-color: rgba(0, 0, 0, .5);
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
     }
 
     .fixtures-edit *{

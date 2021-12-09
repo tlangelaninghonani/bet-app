@@ -25,8 +25,8 @@
     <div class="curved-top-home">
         <div class="display-flex-space-between">
             <span>Hi <span class="font-kanit">{{ Session::get("name") }}</span>, We need your <span class="title">phone number</span> for <span class="font-kanit">better and fast</span> communication</span>
-            <span class="material-icons-sharp icon-fixed">
-            call
+            <span class="material-icons-round icon-fixed">
+            smartphone
             </span>
         </div>
         <form action="/signup/phone_number" method="POST">
@@ -34,8 +34,8 @@
             @method("POST")
             <p>
                 <div class="input-box">
-                    <span class="material-icons-sharp">
-                    call
+                    <span class="material-icons-round">
+                    smartphone
                     </span>
                     <input type="number" name="phonenumber" maxlength="10" minlength="10" placeholder="Enter your phone number" required>
                 </div>

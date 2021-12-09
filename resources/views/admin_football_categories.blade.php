@@ -86,8 +86,8 @@
                     </p>
                 </div>
                 <div class="text-align-center" onclick="selectCategory('Sure 2')">
-                    <span class="material-icons-round icon-big-shadow">
-                    check_circle
+                    <span class="material-icons-sharp icon-big-shadow">
+                    check
                     </span><br>
                     <p>
                         <span>Sure 2</span><br>

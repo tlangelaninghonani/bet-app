@@ -48,12 +48,6 @@
                 </span><br>
                 <span>Accounts</span>
             </div>
-            <div class="text-align-center">
-                <span class="material-icons-round">
-                help
-                </span><br>
-                <span>Support</span>
-            </div>
         </div>
     </div>
     <div class="container">

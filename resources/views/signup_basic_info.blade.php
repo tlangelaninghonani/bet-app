@@ -53,10 +53,16 @@
             </p>
             <p>
                 <div class="predictions-centered">
-                    <div class="selected" onclick="swapSignupPhoneEmail(this, 'phone')">
+                    <div class="selected display-flex-align" onclick="swapSignupPhoneEmail(this, 'phone')">
+                        <span class="material-icons-round">
+                        smartphone
+                        </span>    
                         <span>Use phone</span>
                     </div>
-                     <div onclick="swapSignupPhoneEmail(this, 'email')">
+                     <div class="display-flex-align" onclick="swapSignupPhoneEmail(this, 'email')">
+                        <span class="material-icons-round">
+                        email
+                        </span>   
                         <span>Use email</span>
                     </div>
                 </div>
@@ -81,8 +87,8 @@
             <div id="phone">
                 <p>
                     <div class="input-box">
-                        <span class="material-icons-sharp">
-                        call
+                        <span class="material-icons-round">
+                        smartphone
                         </span>
                         <input type="number" name="phonenumber" maxlength="10" minlength="10" placeholder="Enter your phone number">
                     </div>
