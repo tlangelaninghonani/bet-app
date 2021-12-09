@@ -284,72 +284,79 @@
                 @csrf
                 @method("POST")
             </form>
-            <span class="material-icons-round new-fixture" onclick="submitForm('newfixtureform')">
-            add
-            </span>
+            <div class="new-fixture">
+                <span class="material-icons-round" onclick="submitForm('newfixtureform')">
+                add
+                </span>
+                <span>New fixtures</span>
+            </div>
         @endif
         @foreach($fixtures as $fixture)
-    
+            @if($fixture->id == 1)
+                <div class="fixtures fixtures-radius-top">
+            @elseif($fixture->id == sizeof($fixtures))
+                <div class="fixtures fixtures-radius-bottom">
+            @else
                 <div class="fixtures">
-                    <p>
-                        <div class="display-flex">
-                            <!--<div class="bet-number">
-                                <span>{{ $counter++ }}</span>
-                            </div>-->
-                            <div class="fixture-item">
-                                <div class="display-flex-space-between">
-                                    <div class="club-logo truncate">
-                                        <span >{{ $fixture->first_team }} {{ $fixture->first_team_odds }}</span><br>
+            @endif
+                <p>
+                    <div class="display-flex">
+                        <!--<div class="bet-number">
+                            <span>{{ $counter++ }}</span>
+                        </div>-->
+                        <div class="fixture-item">
+                            <div class="display-flex-space-between">
+                                <div class="club-logo truncate">
+                                    <span >{{ $fixture->first_team }} {{ $fixture->first_team_odds }}</span><br>
+                                </div>
+                                <span class="font-kanit-small">V</span>
+                                <div class="club-logo truncate">
+                                    <span>{{ $fixture->second_team }} {{ $fixture->second_team_odds }}</span>
+                                </div>
+                            </div>
+                            <div class="display-flex-space-between">
+                                <div>
+                                    <div>
+                                        <span class="title">{{ $fixture->prediction }}</span>
                                     </div>
-                                    <span class="font-kanit-small">V</span>
-                                    <div class="club-logo truncate">
-                                        <span>{{ $fixture->second_team }} {{ $fixture->second_team_odds }}</span>
+                                    <div class="display-flex-align">
+                                        <span class="material-icons-round icon-font-small">
+                                        swap_horiz
+                                        </span>
+                                        <span class="title-small">Draw odds</span><span>{{ $fixture->draw_odds }}</span>
+                                    </div>
+                                    <div class="display-flex-align">
+                                        <span class="material-icons-round icon-font-small">
+                                        schedule
+                                        </span>
+                                        <span class="title-small">{{ $fixture->date }}</span>
                                     </div>
                                 </div>
-                                <div class="display-flex-space-between">
+                                <form action="/delete/{{ $fixture->id }}" method="POST" class="display-none" id="deletefixture{{ $fixture->id }}">
+                                    @csrf
+                                    @method("POST")
+                                </form>
+                                <form action="/edit/{{ $fixture->id }}" method="POST" class="display-none" id="editfixture{{ $fixture->id }}">
+                                    @csrf
+                                    @method("POST")
+                                </form>
+                                <div class="display-flex-align">
                                     <div>
-                                        <div>
-                                            <span class="title">{{ $fixture->prediction }}</span>
-                                        </div>
-                                        <div class="display-flex-align">
-                                            <span class="material-icons-round icon-font-small">
-                                            swap_horiz
-                                            </span>
-                                            <span class="title-small">Draw odds</span><span>{{ $fixture->draw_odds }}</span>
-                                        </div>
-                                        <div class="display-flex-align">
-                                            <span class="material-icons-round icon-font-small">
-                                            schedule
-                                            </span>
-                                            <span class="title-small">{{ $fixture->date }}</span>
-                                        </div>
+                                        <span class="material-icons-round delete-fixure-icon" onclick="submitForm('editfixture{{ $fixture->id }}')">
+                                        edit
+                                        </span>
                                     </div>
-                                    <form action="/delete/{{ $fixture->id }}" method="POST" class="display-none" id="deletefixture{{ $fixture->id }}">
-                                        @csrf
-                                        @method("POST")
-                                    </form>
-                                    <form action="/edit/{{ $fixture->id }}" method="POST" class="display-none" id="editfixture{{ $fixture->id }}">
-                                        @csrf
-                                        @method("POST")
-                                    </form>
-                                    <div class="display-flex-align">
-                                        <div>
-                                            <span class="material-icons-round delete-fixure-icon" onclick="submitForm('editfixture{{ $fixture->id }}')">
-                                            edit
-                                            </span>
-                                        </div>
-                                        <div>
-                                            <span class="material-icons-round delete-fixure-icon" onclick="submitForm('deletefixture{{ $fixture->id }}')">
-                                            delete
-                                            </span>
-                                        </div>
+                                    <div>
+                                        <span class="material-icons-round delete-fixure-icon" onclick="submitForm('deletefixture{{ $fixture->id }}')">
+                                        delete
+                                        </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </p>
-                </div>
-          
+                    </div>
+                </p>
+            </div>
         @endforeach
     </div>
 </body>

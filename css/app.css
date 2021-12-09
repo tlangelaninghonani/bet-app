@@ -367,15 +367,23 @@ input:-webkit-autofill {
 }
 
 .new-fixture{
-    padding: 20px;
+    padding: 16px 30px;
     box-shadow: var(--shadow-thick);
-    border-radius: 50%;
+    border-radius: 40px;
     position: fixed;
     bottom: 0;
     right: 0;
     margin: var(--padding);
     z-index: 50;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap);
+}
+
+.new-fixture *{
+    color: black;
 }
 
 .dashboard{
@@ -391,7 +399,7 @@ input:-webkit-autofill {
 }
 
 .add-fixture{
-    padding: 15px 25px;
+    padding: 16px 40px;
     box-shadow: var(--shadow);
     border-radius: 40px;
     background-color: black;
@@ -674,7 +682,18 @@ button *{
 .fixtures{
     padding: 5px 20px;
     background-color: black;
-    border-radius: 15px;
+    margin-left: -10px;
+    margin-right: -10px;;
+}
+
+.fixtures-radius-top{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.fixtures-radius-bottom{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .fixtures *{
@@ -714,6 +733,10 @@ button *{
 }
 
 .header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
     background-color: black;
     padding: var(--padding);
     border-bottom-left-radius: 15px;
