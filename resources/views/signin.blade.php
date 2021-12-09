@@ -58,13 +58,9 @@
                     </span>
                 </button>
             </p>
+      
             <p>
-                <div class="text-align-center">
-                    <span class="font-kanit-small">Or</span>
-                </div>
-            </p>
-            <p>
-                <button class="signin-google" type="button" onclick="submitForm('googleauth')">
+                <button class="signin-google auth-button" type="button" onclick="submitForm('googleauth')">
                     <img class="google-img" src="https://img.icons8.com/color/48/000000/google-logo.png" alt="">
                     <span>Sign in with Google</span>
                 </button>

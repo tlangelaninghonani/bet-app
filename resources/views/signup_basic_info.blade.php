@@ -112,7 +112,7 @@
                 </div>
             </p>
             <p>
-                <button class="signin-google" type="button" onclick="submitForm('googleauth')">
+                <button class="signin-google auth-button" type="button" onclick="submitForm('googleauth')">
                     <img class="google-img" src="https://img.icons8.com/color/48/000000/google-logo.png" alt="">
                     <span>Sign up with Google</span>
                 </button>
