@@ -66,7 +66,7 @@
         @foreach($accounts::all() as $account)
             <div class="display-flex-align" onclick="redirect('/user/{{ $account->id }}')">
                 <span class="material-icons-round icon-big">
-                account_box
+                account_circle
                 </span>
                 <div class="truncate">
                     <span class="title">{{ $account->full_name }}</span><br>

@@ -21,12 +21,45 @@
     }
 </style>
 <body>
-    <div class="header-plain">
-        <div class="display-flex-align">
-            <span class="material-icons-round icon-mid" onclick="redirectBack('')">
-            arrow_back
+    <div class="menu-black" id="menu">
+        <div class="display-flex-end">
+            <span class="material-icons-round icon-mid" onclick="showHide('menu')">
+            close
             </span>
+        </div>
+        <p>
+            <div class="display-flex-align" onclick="redirect('/signout')">
+                <span class="title">Sign out</span>
+            </div>
+        </p>
+    </div>
+    <div class="header-fixtures">
+        <div class="display-flex-space-between">
             <span class="app-name"><span class="font-kanit">Mabuza</span> BetAssistant</span>
+            <span class="material-icons-round" onclick="showHide('menu')">
+            more_vert
+            </span>
+        </div>
+        <br>
+        <div class="display-flex-space-between">
+            <div class="text-align-center" onclick="redirect('/football_categories')">
+                <span class="material-icons-round">
+                sports_soccer
+                </span><br>
+                <span>Fixtures</span><br>
+            </div>
+            <div class="text-align-center" onclick="redirect('/subscription')">
+                <span class="material-icons-round">
+                payment
+                </span><br>
+                <span>Subscription</span>
+            </div>
+            <div class="text-align-center" onclick="redirect('/account')">
+                <span class="material-icons-round">
+                account_circle
+                </span><br>
+                <span>Account</span>
+            </div>
         </div>
     </div>
     <div class="container">

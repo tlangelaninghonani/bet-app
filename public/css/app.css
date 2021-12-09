@@ -731,19 +731,13 @@ button *{
 }
 
 .header{
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: black;
+    background-color: white;
     padding: var(--padding);
+    box-shadow: var(--shadow);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
 
-.header *{
-    color: white;
-}
 .header-fixtures{
     background-color: white;
     padding: var(--padding);
