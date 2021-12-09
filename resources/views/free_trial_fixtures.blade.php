@@ -68,17 +68,6 @@
     </div>
     <div class="container">
         @if($user->fixtures_published)
-            <div class="display-flex-space-between">
-                <div class="display-flex-align">
-                    <span class="material-icons-round">
-                    alarm
-                    </span>
-                    <span>Free <span class="font-kanit">trial</span></span>
-                </div>
-                <!--<div>
-                    <span>{{ date("Y-m-d") }}</span>
-                </div>-->
-            </div>
             <div class="football-categories">
                 <div onclick="redirect('/fixtures/Double chance')">
                     <span class="material-icons-round">
@@ -184,69 +173,58 @@
                 </div>
             </p>
         @else
-            <div class="display-flex-space-between">
-                <div class="display-flex-align">
+            <div class="football-categories">
+                <div onclick="redirect('/fixtures/Double chance')">
                     <span class="material-icons-round">
-                    alarm
+                    close
                     </span>
-                    <span>Free <span class="font-kanit">trial</span></span>
+                    <span>Double chance</span>
                 </div>
-                <!--<div>
-                    <span>{{ date("Y-m-d") }}</span>
-                </div>-->
+                <div onclick="redirect('/fixtures/Take the risk')">
+                    <span class="material-icons-round">
+                    question_mark
+                    </span>
+                    <span>Take the risk</span>
+                </div>
+                <div onclick="redirect('/fixtures/Both to score')">
+                    <span class="material-icons-round">
+                    multiple_stop
+                    </span>
+                    <span>Both to score</span>
+                </div>
+                <div onclick="redirect('/fixtures/2.5 Goals')">
+                    <span class="material-icons-round">
+                    hdr_strong
+                    </span>
+                    <span>2.5 Goals</span>
+                </div>
+                <div onclick="redirect('/fixtures/1.5 Goals')">
+                    <span class="material-icons-round">
+                    hdr_weak
+                    </span>
+                    <span>1.5 Goals</span>
+                </div>
+                <div onclick="redirect('/fixtures/Sure 2')">
+                    <span class="material-icons-round">
+                    check_circle
+                    </span>
+                    <span>Sure 2</span>
+                </div>
+                <div onclick="redirect('/fixtures/single_combo')">
+                    <span class="material-icons-round">
+                    merge_type
+                    </span>
+                    <span>Single combo</span>
+                </div>
             </div>
             <p>
-                <div class="football-categories">
-                    <div onclick="redirect('/fixtures/Double chance')">
-                        <span class="material-icons-round">
-                        close
-                        </span>
-                        <span>Double chance</span>
-                    </div>
-                    <div onclick="redirect('/fixtures/Take the risk')">
-                        <span class="material-icons-round">
-                        question_mark
-                        </span>
-                        <span>Take the risk</span>
-                    </div>
-                    <div onclick="redirect('/fixtures/Both to score')">
-                        <span class="material-icons-round">
-                        multiple_stop
-                        </span>
-                        <span>Both to score</span>
-                    </div>
-                    <div onclick="redirect('/fixtures/2.5 Goals')">
-                        <span class="material-icons-round">
-                        hdr_strong
-                        </span>
-                        <span>2.5 Goals</span>
-                    </div>
-                    <div onclick="redirect('/fixtures/1.5 Goals')">
-                        <span class="material-icons-round">
-                        hdr_weak
-                        </span>
-                        <span>1.5 Goals</span>
-                    </div>
-                    <div onclick="redirect('/fixtures/Sure 2')">
-                        <span class="material-icons-round">
-                        check_circle
-                        </span>
-                        <span>Sure 2</span>
-                    </div>
-                    <div onclick="redirect('/fixtures/single_combo')">
-                        <span class="material-icons-round">
-                        merge_type
-                        </span>
-                        <span>Single combo</span>
-                    </div>
+                <div class="text-align-center">
+                    <span class="material-icons-round icon-big">
+                    unpublished
+                    </span><br>
+                    <span>No <span class="font-kanit">published</span> predictions yet</span>
                 </div>
             </p>
-            <div class="text-align-center">
-                <span class="material-icons-round icon-big">
-                unpublished
-                </span><br>
-                <span>No <span class="font-kanit">published</span> predictions yet</span>
-            </div>
         @endif
     </div>
 </body>
