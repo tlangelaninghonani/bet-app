@@ -45,7 +45,7 @@
                 </span><br>
                 <span>Fixtures</span><br>
             </div>
-            <div class="text-align-center truncate" onclick="redirect('/subscription')">
+            <div class="text-align-center" onclick="redirect('/subscription')">
                 <span class="material-icons-round">
                 payment
                 </span><br>
