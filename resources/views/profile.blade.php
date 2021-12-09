@@ -60,16 +60,8 @@
         </div>
     </div>
     <div class="container">
-        <div class="profile-update">
-            <div>
-                <span class="material-icons-round">
-                update
-                </span>
-                <span>Update changes</span>
-            </div>
-        </div>
         <p>
-            <span style="padding-left: 18px"><span class="font-kanit-small">Personal</span> information</span>
+            <span style="padding-left: 18px" class="title"><span class="font-kanit">Personal</span> information</span>
         </p>
         <p>
             <div class="input-box">
@@ -85,7 +77,7 @@
         <p>
             <div class="input-box">
                 <span class="material-icons-round">
-                call
+                smartphone
                 </span>
                 <input type="number" placeholder="Enter your phone number" value="{{ $user->phone_number }}">
                 <div class="clear" onclick="clearText('firstteam')">
@@ -97,26 +89,49 @@
             
         </p>
         <p>
-            <span style="padding-left: 18px"><span class="font-kanit-small">Banking</span> information</span>
+            <span style="padding-left: 18px" class="title"><span class="font-kanit">Banking</span> information</span>
         </p>
-        <div class="card">
-            <p>
-                <div>
-                    <span class="title">{{ $banking->bank_name }}</span><br><br>
-                    <div class="display-flex-space-between">
-                        <div>
-                            <span class="title-small">{{ $banking->account_holder }}</span><br>
-                            <span class="title-small">{{ $banking->account_number }}</span>
-                        </div>
-                        <div>
-                            <span class="material-icons-round">
-                            memory
-                            </span>
-                        </div>
-                    </div>
+        <p>
+            <div class="input-box">
+                <span class="material-icons-round">
+                payment
+                </span>
+                <input type="text" placeholder="Account holder" value="{{ $banking->bank_name }}">
+                <div class="clear" onclick="clearText('firstteam')">
+                    <span>Clear</span>
                 </div>
-            </p>
-        </div>
+            </div>
+        </p>
+        <p>
+            <div class="input-box">
+                <span class="material-icons-round">
+                account_circle
+                </span>
+                <input type="text" placeholder="Account holder" value="{{ $banking->account_holder }}">
+                <div class="clear" onclick="clearText('firstteam')">
+                    <span>Clear</span>
+                </div>
+            </div>
+        </p>
+        <p>
+            <div class="input-box">
+                <span class="material-icons-round">
+                dialpad
+                </span>
+                <input type="text" placeholder="Account holder" value="{{ $banking->account_number }}">
+                <div class="clear" onclick="clearText('firstteam')">
+                    <span>Clear</span>
+                </div>
+            </div>
+        </p>
+        <p>
+            <button onclick="redirect('/signup')">
+                <span class="material-icons-sharp">
+                update
+                </span>
+                <span>Save changes</span>
+            </button>
+        </p>
     </div>
 </body>
 </html>
