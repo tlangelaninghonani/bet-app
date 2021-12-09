@@ -61,7 +61,7 @@
             <div class="display-flex-space-around">
                 <div class="text-align-center" onclick="selectCategory('Both to score')">
                     <span class="material-icons-round icon-big-shadow">
-                    multiple_stop
+                    swap_vert
                     </span><br>
                     <p>
                         <span>Both to score</span><br>

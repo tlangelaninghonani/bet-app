@@ -20,7 +20,7 @@
 <body>
     <div class="menu-black" id="menu">
         <div class="display-flex-end">
-            <span class="material-icons-round icon-mid" onclick="showHide('menu')">
+            <span class="material-icons-round" onclick="showHide('menu')">
             close
             </span>
         </div>
@@ -58,6 +58,33 @@
                 <span>Account</span>
             </div>
         </div>
+    </div>
+    <div class="container">
+        <div class="display-flex-center">
+            <span>Balance</span>
+            <div class="amount">
+                <span class="font-kanit">R{{ number_format($subscription->balance, 2) }}</span>
+            </div>
+        </div>
+        <p>
+            <span class="kanit-font">Enter your <span class="font-kanit-small">ticket number</span> included with your <span class="title">ticket card</span> to top up your account</span>
+        </p>
+        <p>
+            <div class="input-box">
+                <span class="material-icons-round">
+                article
+                </span>
+                <input type="number" name="ticketnumber" placeholder="Ticket number">
+            </div>
+        </p>
+        <p>
+            <button onclick="redirect('/signup')">
+                <span class="material-icons-sharp">
+                published_with_changes
+                </span>
+                <span>Activate ticket</span>
+            </button>
+        </p>
     </div>
     <!--<div class="container">
         @if($user->state == "trial")

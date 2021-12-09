@@ -21,7 +21,7 @@
 <body>
     <div class="menu-black" id="menu">
         <div class="display-flex-end">
-            <span class="material-icons-round icon-mid" onclick="showHide('menu')">
+            <span class="material-icons-round" onclick="showHide('menu')">
             close
             </span>
         </div>
@@ -77,7 +77,7 @@
                 </div>
                 <div onclick="redirect('/fixtures/Both to score')">
                     <span class="material-icons-round">
-                    multiple_stop
+                    swap_vert
                     </span>
                     <span>Both to score</span>
                 </div>
@@ -119,40 +119,42 @@
                 {{ $counter = 1 }}
             </div>
             @foreach($fixtures as $fixture)
-                <div class="fixtures">
-                    <p>
-                        <div class="display-flex">
-                            <!--<div class="bet-number">
-                                <span>{{ $counter++ }}</span>
-                            </div>-->
-                            <div class="fixture-item">
-                                <div class="display-flex-space-between">
-                                    <div class="club-logo truncate">
-                                        <span>{{ $fixture->first_team }} {{ $fixture->first_team_odds }}</span>
+                <div class="fixtures-auto">
+                    <div class="fixtures">
+                        <p>
+                            <div class="display-flex">
+                                <!--<div class="bet-number">
+                                    <span>{{ $counter++ }}</span>
+                                </div>-->
+                                <div class="fixture-item">
+                                    <div class="display-flex-space-between">
+                                        <div class="club-logo truncate">
+                                            <span>{{ $fixture->first_team }} {{ $fixture->first_team_odds }}</span>
+                                        </div>
+                                        <span class="font-kanit-small versus">VS</span>
+                                        <div class="club-logo truncate">
+                                            <span>{{ $fixture->second_team }} {{ $fixture->second_team_odds }}</span>
+                                        </div>
                                     </div>
-                                    <span class="font-kanit-small">V</span>
-                                    <div class="club-logo truncate">
-                                        <span>{{ $fixture->second_team }} {{ $fixture->second_team_odds }}</span>
+                                    <div>
+                                        <span class="title">{{ $fixture->prediction }}</span>
                                     </div>
-                                </div>
-                                <div>
-                                    <span class="title">{{ $fixture->prediction }}</span>
-                                </div>
-                                <div class="display-flex-align">
-                                    <span class="material-icons-round icon-font-small">
-                                    swap_horiz
-                                    </span>
-                                    <span class="title-small">Draw odds</span><span>{{ $fixture->draw_odds }}</span>
-                                </div>
-                                <div class="display-flex-align">
-                                    <span class="material-icons-round icon-font-small">
-                                    schedule
-                                    </span>
-                                    <span class="title-small">{{ $fixture->date }}</span>
+                                    <div class="display-flex-align">
+                                        <span class="material-icons-round icon-font-small">
+                                        swap_horiz
+                                        </span>
+                                        <span class="title-small">Draw odds</span><span>{{ $fixture->draw_odds }}</span>
+                                    </div>
+                                    <div class="display-flex-align">
+                                        <span class="material-icons-round icon-font-small">
+                                        schedule
+                                        </span>
+                                        <span class="title-small">{{ $fixture->date }}</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </p>
+                        </p>
+                    </div>
                 </div>
             @endforeach
         @else
@@ -171,7 +173,7 @@
                 </div>
                 <div onclick="redirect('/fixtures/Both to score')">
                     <span class="material-icons-round">
-                    multiple_stop
+                    swap_vert
                     </span>
                     <span>Both to score</span>
                 </div>

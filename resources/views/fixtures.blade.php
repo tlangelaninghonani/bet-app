@@ -24,7 +24,7 @@
     </span>-->
     <div class="menu-black" id="menu">
         <div class="display-flex-end">
-            <span class="material-icons-round icon-mid" onclick="showHide('menu')">
+            <span class="material-icons-round" onclick="showHide('menu')">
             close
             </span>
         </div>
@@ -94,7 +94,7 @@
                 </div>
                 <div onclick="redirect('/fixtures/Both to score')">
                     <span class="material-icons-round">
-                    multiple_stop
+                    swap_vert
                     </span>
                     <span>Both to score</span>
                 </div>
@@ -203,7 +203,7 @@
                     </div>
                     <div onclick="redirect('/fixtures/Both to score')">
                         <span class="material-icons-round">
-                        multiple_stop
+                        swap_vert
                         </span>
                         <span>Both to score</span>
                     </div>

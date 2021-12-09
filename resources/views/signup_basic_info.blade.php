@@ -52,7 +52,7 @@
                 </div>
             </p>
             <p>
-                <div class="predictions-centered">
+                <div class="display-flex-auto">
                     <div class="selected display-flex-align" onclick="swapSignupPhoneEmail(this, 'phone')">
                         <span class="material-icons-round">
                         smartphone

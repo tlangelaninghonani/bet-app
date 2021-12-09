@@ -12,7 +12,7 @@ body{
 
 :root{
     --input-silver: rgb(249, 249, 249);
-    --padding: 10px;
+    --padding: 15px;
     --gap: 10px;
     --shadow-thick: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     --shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
@@ -338,7 +338,7 @@ input:-webkit-autofill {
     z-index: 10;
     box-shadow: var(--shadow-thick);
     padding: var(--padding);
-    padding-left: 25px;
+    padding-left: 30px;
     display: none;
 }
 
@@ -352,7 +352,7 @@ input:-webkit-autofill {
     z-index: 10;
     box-shadow: var(--shadow);
     padding: var(--padding);
-    padding-left: 25px;
+    padding-left: 30px;
     display: none;
 }
 
@@ -482,7 +482,7 @@ img{
 }
 
 .banner-home{
-    height: 500px;
+    height: 300px;
     
 }
 
@@ -633,7 +633,7 @@ hr{
 }
 
 .icon-big-shadow{
-    font-size: 80px !important;
+    font-size: 70px !important;
     box-shadow: var(--shadow);
     padding: 30px;
     border-radius: 50%;
@@ -683,6 +683,10 @@ button *{
 
 }
 
+.versus{
+    padding: 0 25px;
+}
+
 .fixtures *{
     color: black;
 }
@@ -708,6 +712,7 @@ button *{
 
 .app-name{
     font-size: 25px;
+    margin-top: -5px;
 }
 
 .width-100{
@@ -724,6 +729,11 @@ button *{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.fixtures-auto{
+    display: flex;
+    overflow: auto;
 }
 
 .header-home *{

@@ -161,7 +161,7 @@
                                 <div id="selectedcategory" class="selected display-flex-align" onclick="redirect('/admin_fixtures/{{ $fixturesIdCl->id }}')">
                                     @if($fixturesIdCl->category == "Both to score")
                                         <span class="material-icons-round">
-                                        multiple_stop
+                                        swap_vert
                                         </span>
                                     @elseif($fixturesIdCl->category == "Double chance")
                                         <span class="material-icons-round">

@@ -20,7 +20,7 @@
 <body>
     <div class="menu-black" id="menu">
         <div class="display-flex-end">
-            <span class="material-icons-round icon-mid" onclick="showHide('menu')">
+            <span class="material-icons-round" onclick="showHide('menu')">
             close
             </span>
         </div>

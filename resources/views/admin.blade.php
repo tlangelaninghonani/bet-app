@@ -23,23 +23,17 @@
     </span>-->
     <div class="menu" id="menu">
         <div class="display-flex-end">
-            <span class="material-icons-round icon-mid" onclick="showHide('menu')">
+            <span class="material-icons-round" onclick="showHide('menu')">
             close
             </span>
         </div>
         <p>
             <div class="display-flex-align" onclick="redirect('/sell_fixtures')">
-                <span class="material-icons-round icon-mid">
-                sports_volleyball
-                </span>
                 <span class="title">Sell fixtures</span>
             </div>
         </p>
         <p>
             <div class="display-flex-align" onclick="redirect('/signout')">
-                <span class="material-icons-round icon-mid">
-                arrow_back
-                </span>
                 <span class="title">Sign out</span>
             </div>
         </p>
@@ -90,12 +84,12 @@
                     </span><br>
                     @if($fixturesId::latest()->first())
                         <div>
-                            <span class="font-kanit">{{ $fixturesId::latest()->first()->category }}</span><br>
+                            <span class="font-kanit-small">{{ $fixturesId::latest()->first()->category }}</span><br>
                             <span class="title-small">{{ $fixturesId::latest()->first()->created_at }}</span>
                         </div>
                     @else
                         <div>
-                            <span>Unpublished</span>
+                            <span class="font-kanit-small">Unpublished</span>
                         </div>
                     @endif
                     
