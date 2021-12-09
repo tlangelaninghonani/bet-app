@@ -12,7 +12,7 @@ body{
 
 :root{
     --input-silver: rgb(249, 249, 249);
-    --padding: 15px 20px;
+    --padding: 10px;
     --gap: 10px;
     --shadow-thick: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     --shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
@@ -235,8 +235,8 @@ input:-webkit-autofill::first-line{
 }
 
 .curved-top-plain{
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     background-color: black;
     padding: var(--padding);
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -299,8 +299,8 @@ input:-webkit-autofill {
 .curved-top-home{
     background-color: white;
     padding: var(--padding);
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     z-index: 5000;
     position: absolute;
     left: 0;
@@ -614,7 +614,8 @@ hr{
 }
 
 .icon-mid{
-    font-size: 30px !important;
+    font-size: 35px !important;
+    padding-right: 15px;
 }
 
 .title-small{
@@ -668,7 +669,7 @@ button *{
 }
 
 .header-plain{
-    padding: 10px;
+    padding: var(--padding);
 }
 
 .app-name{
@@ -685,7 +686,7 @@ button *{
     left: 0;
     right: 0;
     z-index: 5;
-    padding: 10px;
+    padding: var(--padding);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -701,7 +702,7 @@ button *{
     left: 0;
     right: 0;
     background-color: black;
-    padding: 10px;
+    padding: var(--padding);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
@@ -715,7 +716,7 @@ button *{
     left: 0;
     right: 0;
     background-color: white;
-    padding: 10px;
+    padding: var(--padding);
     box-shadow: var(--shadow);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
