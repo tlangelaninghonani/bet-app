@@ -16,7 +16,7 @@ body{
     --gap: 10px;
     --shadow-thick: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     --shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-    --primary-color: rgb(212, 26, 26);
+    --primary-color: red;
     --faint-primary-color: #c9dbf8;
 }
 
@@ -36,7 +36,7 @@ body{
 .amount{
     padding: 10px 25px;
     background-color: black;
-    border-radius: 4px;
+    border-radius: 40px;
     display: flex;
     align-items: center;
     gap: var(--gap);
@@ -205,7 +205,7 @@ input:focus ,select:focus{
     padding: 16px 30px;
     box-shadow: var(--shadow);
     white-space: nowrap;
-    border-radius: 4px;
+    border-radius: 40px;
     display: flex;
     align-items: center;
     gap: var(--gap);
@@ -230,7 +230,7 @@ input:focus ,select:focus{
     padding: 16px 30px;
     box-shadow: var(--shadow);
     white-space: nowrap;
-    border-radius: 4px;
+    border-radius: 40px;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -253,8 +253,8 @@ input:-webkit-autofill::first-line{
 }
 
 .curved-top-plain{
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     background-color: black;
     padding: var(--padding);
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -283,7 +283,7 @@ input:-webkit-autofill::first-line{
     align-items: center;
     gap: var(--gap);
     background-color: var(--input-silver);
-    border-radius: 4px;
+    border-radius: 40px;
     padding: 0 18px;
 }
 
@@ -297,7 +297,7 @@ input, select{
     width: 100%;
     box-sizing: border-box;
     background-color: inherit;
-    border-radius: 4px;
+    border-radius: 40px;
 }
 
 input:-webkit-autofill {
@@ -317,8 +317,8 @@ input:-webkit-autofill {
 .curved-top-home{
     background-color: white;
     padding: var(--padding);
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     z-index: 5000;
     position: absolute;
     left: 0;
@@ -370,7 +370,7 @@ input:-webkit-autofill {
 .new-fixture{
     padding: 20px;
     box-shadow: var(--shadow-thick);
-    border-radius: 4px;
+    border-radius: 50%;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -394,7 +394,7 @@ input:-webkit-autofill {
 .add-fixture{
     padding: 15px 25px;
     box-shadow: var(--shadow);
-    border-radius: 4px;
+    border-radius: 40px;
     background-color: black;
 }
 
@@ -498,7 +498,7 @@ button{
     align-items: center;
     border: none;
     color: white !important;
-    border-radius: 4px;
+    border-radius: 40px;
 }
 
 .display-flex-end{
@@ -628,7 +628,7 @@ hr{
     font-size: 80px !important;
     box-shadow: var(--shadow);
     padding: 30px;
-    border-radius: 4px;
+    border-radius: 50%;
 }
 
 .icon-mid{
@@ -654,7 +654,7 @@ button *{
 
 .card{
     background-color: black;
-    border-radius: 4px;
+    border-radius: 15px;
     padding: var(--padding) 25px;
 }
 
@@ -674,7 +674,7 @@ button *{
 .fixtures{
     padding: var(--padding) 25px;
     background-color: black;
-    border-radius: 4px;
+    border-radius: 15px;
 }
 
 .fixtures *{
@@ -720,8 +720,8 @@ button *{
     right: 0;
     background-color: black;
     padding: var(--padding);
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .header *{
@@ -735,6 +735,6 @@ button *{
     background-color: white;
     padding: var(--padding);
     box-shadow: var(--shadow);
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }

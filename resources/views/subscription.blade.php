@@ -26,9 +26,6 @@
         </div>
         <p>
             <div class="display-flex-align" onclick="redirect('/signout')">
-                <span class="material-icons-round icon-mid">
-                arrow_back
-                </span>
                 <span class="title">Sign out</span>
             </div>
         </p>
@@ -105,20 +102,22 @@
             </div>
         </div>
         <div class="card">
-            <div>
-                <span class="title">Capitec Bank Limited</span><br><br>
-                <div class="display-flex-space-between">
-                    <div>
-                        <span class="title-small">MR T NGHONANI</span><br>
-                        <span class="title-small">1605117844</span>
-                    </div>
-                    <div>
-                        <span class="material-icons-round">
-                        memory
-                        </span>
+            <p>
+                <div>
+                    <span class="title">Capitec Bank Limited</span><br><br>
+                    <div class="display-flex-space-between">
+                        <div>
+                            <span class="title-small">MR T NGHONANI</span><br>
+                            <span class="title-small">1605117844</span>
+                        </div>
+                        <div>
+                            <span class="material-icons-round">
+                            memory
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </p>
         </div>
         <p>
             <span>Usually takes 20 minutes to reflect</span>

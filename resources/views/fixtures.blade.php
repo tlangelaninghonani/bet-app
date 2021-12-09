@@ -30,9 +30,6 @@
         </div>
         <p>
             <div class="display-flex-align" onclick="redirect('/signout')">
-                <span class="material-icons-round icon-mid">
-                arrow_back
-                </span>
                 <span class="title">Sign out</span>
             </div>
         </p>
