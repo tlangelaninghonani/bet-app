@@ -23,7 +23,7 @@ body{
 *{
     color: white;
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .leagues{
@@ -35,7 +35,7 @@ body{
 
 .amount{
     padding: 10px 25px;
-    background-color: black;
+    box-shadow: var(--shadow);
     border-radius: 40px;
     display: flex;
     align-items: center;
@@ -97,9 +97,6 @@ body{
     color: white;
 }
 
-.amount *{
-    color: white;
-}
 
 .icon-category{
     padding: 15px;
@@ -336,11 +333,12 @@ input:-webkit-autofill {
     top: 0;
     right: 0;
     bottom: 0;
-    width: 60%;
+    width: 70%;
     background-color: white;
     z-index: 10;
     box-shadow: var(--shadow-thick);
     padding: var(--padding);
+    padding-left: 25px;
     display: none;
 }
 
@@ -349,11 +347,12 @@ input:-webkit-autofill {
     top: 0;
     right: 0;
     bottom: 0;
-    width: 60%;
+    width: 70%;
     background-color: black;
     z-index: 10;
     box-shadow: var(--shadow);
     padding: var(--padding);
+    padding-left: 25px;
     display: none;
 }
 
@@ -476,6 +475,7 @@ img{
 
 .banner-home{
     height: 500px;
+    
 }
 
 .banner-home img{
@@ -621,7 +621,7 @@ hr{
 }
 
 .icon-big{
-    font-size: 100px !important;
+    font-size: 150px !important;
 }
 
 .icon-big-shadow{
@@ -653,9 +653,11 @@ button *{
 }
 
 .card{
+    padding: 5px 20px;
     background-color: black;
     border-radius: 15px;
-    padding: var(--padding) 25px;
+    margin-left: -10px; 
+    margin-right: -10px; 
 }
 
 .card *{
@@ -672,9 +674,11 @@ button *{
 }
 
 .fixtures{
-    padding: var(--padding) 25px;
+    padding: 5px 20px;
     background-color: black;
     border-radius: 15px;
+    margin-left: -10px; 
+    margin-right: -10px; 
 }
 
 .fixtures *{
