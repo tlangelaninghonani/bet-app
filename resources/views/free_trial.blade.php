@@ -30,6 +30,7 @@
         </div>
     </div>
     <div class="container">
+        <div class="shadow-patch"></div>
         <p>
             <div class="text-align-center">
                 <span class="material-icons-round icon-big">

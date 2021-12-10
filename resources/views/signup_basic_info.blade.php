@@ -56,7 +56,7 @@
                 <div class="display-flex-auto">
                     <div class="selected display-flex-align" onclick="swapSignupPhoneEmail(this, 'phone')">
                         <span class="material-icons-round">
-                        smartphone
+                        call
                         </span>    
                         <span>Use phone</span>
                     </div>
@@ -89,7 +89,7 @@
                 <p>
                     <div class="input-box">
                         <span class="material-icons-round">
-                        smartphone
+                        call
                         </span>
                         <input type="number" name="phonenumber" maxlength="10" minlength="10" placeholder="Enter your phone number">
                     </div>

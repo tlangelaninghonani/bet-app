@@ -48,15 +48,13 @@
             <input type="hidden" id="outcome" name="outcome">
             @csrf
             @method("POST")
+            <span class="title">Setup a <span class="font-kanit">fixture</span></span>
             <p>
                 <div class="input-box">
                     <span class="material-icons-sharp primary-color-text">
                     groups
                     </span>
                     <input type="text" style="text-transform: capitalize" id="firstteam" name="firstteam" placeholder="First team" required>
-                    <div class="clear" onclick="clearText('firstteam')">
-                        <span>Clear</span>
-                    </div>
                 </div>
             </p>
             <div class="text-align-center">
@@ -68,9 +66,6 @@
                     groups
                     </span>
                     <input type="text" style="text-transform: capitalize" id="secondteam" name="secondteam" placeholder="Second team" required>
-                    <div class="clear" onclick="clearText('secondteam')">
-                        <span>Clear</span>
-                    </div>
                 </div>
             </p>
             <p>

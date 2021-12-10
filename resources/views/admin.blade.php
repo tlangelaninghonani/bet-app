@@ -63,6 +63,7 @@
         </div>
     </div>
     <div class="container">
+        <div class="shadow-patch"></div>
         <div class="dashboard">
             <div class="dashboard-item">
                 <div class="text-align-center">

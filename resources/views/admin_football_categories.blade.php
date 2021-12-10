@@ -30,6 +30,7 @@
         </div>
     </div>
     <div class="container">
+        <div class="shadow-patch"></div>
         <span>Select <span class="font-kanit">football category</span></span>
         <p>
             <div class="input-box">

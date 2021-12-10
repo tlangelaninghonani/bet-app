@@ -60,6 +60,7 @@
         </div>
     </div>
     <div class="container">
+        <div class="shadow-patch"></div>
         <div>
             <span><span class="font-kanit-small">{{ $accounts::get()->count() }}</span> user(s)</span>
         </div>

@@ -30,6 +30,7 @@
         </div>
     </div>
     <div class="display-flex-align container">
+        <div class="shadow-patch"></div>
         <span class="material-icons-round icon-big">
         account_circle
         </span>

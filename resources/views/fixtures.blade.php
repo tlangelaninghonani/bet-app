@@ -64,6 +64,7 @@
         </div>
     </div>
     <div class="container">
+        <div class="shadow-patch"></div>
         @if($user->fixtures_published)
             <div class="football-categories">
                 <div onclick="redirect('/fixtures/Double chance')">

@@ -60,6 +60,7 @@
         </div>
     </div>
     <div class="container">
+        <div class="shadow-patch"></div>
         <div class="display-flex-center">
             <span>Balance</span>
             <div class="amount">

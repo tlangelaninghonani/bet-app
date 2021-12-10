@@ -63,6 +63,7 @@
         </div>
     </div>
     <div class="container">
+        <div class="shadow-patch"></div>
        <span>Choose a <span class="font-kanit">football category</span></span>
        <form class="display-none" action="/purchase/5" id="package5" method="POST">
             @csrf

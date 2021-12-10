@@ -63,6 +63,7 @@
         </div>
     </div>
     <div class="container">
+        <div class="shadow-patch"></div>
         <p>
             <span class="title"><span class="font-kanit">Personal</span> information</span>
         </p>
@@ -72,20 +73,14 @@
                 account_circle
                 </span>
                 <input type="text" placeholder="Enter your fullname" value="{{ $user->full_name }}">
-                <div class="clear" onclick="clearText('firstteam')">
-                    <span>Clear</span>
-                </div>
             </div>
         </p>
         <p>
             <div class="input-box">
                 <span class="material-icons-round">
-                smartphone
+                call
                 </span>
                 <input type="number" placeholder="Enter your phone number" value="{{ $user->phone_number }}">
-                <div class="clear" onclick="clearText('firstteam')">
-                    <span>Clear</span>
-                </div>
             </div>
         </p>
         <p>

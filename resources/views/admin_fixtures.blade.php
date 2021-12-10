@@ -64,6 +64,7 @@
         </div>
     </div>
     <div class="container">
+        <div class="shadow-patch"></div>
         <div class="fixtures-auto">
             @if($fixturesId)
                 <form action="/delete/fixtures/{{ $fixtureId }}" method="POST" class="display-none" id="deletefixtureAll">
