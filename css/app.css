@@ -18,7 +18,7 @@ body{
     --gap: 10px;
     --shadow-thick: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     --shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-    --primary-color: red;
+    --primary-color: rgb(170, 11, 11);
     --faint-primary-color: #c9dbf8;
 }
 
@@ -499,7 +499,7 @@ img{
 button{
     padding: 16px;
     width: 100%;
-    background-color: black;
+    background-color: var(--primary-color);
     display: flex;
     gap: var(--gap);
     justify-content: center;
@@ -773,17 +773,25 @@ button *{
 }
 
 .header{
-    background-color: white;
+    background-color: var(--primary-color);
     padding: var(--padding);
     box-shadow: var(--shadow);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
 
+.header *{
+    color: white;
+}
+
 .header-fixtures{
-    background-color: white;
+    background-color: var(--primary-color);
     padding: var(--padding);
     box-shadow: var(--shadow);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+}
+
+.header-fixtures *{
+    color: white;
 }
