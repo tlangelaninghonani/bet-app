@@ -269,7 +269,7 @@ class FixtureController extends Controller
             $twoFiveGoals = 0;
         }
 
-        if(FixtureId::where("category", "1.5 Goals")->exists()){
+        if(FixtureId::where("category", "1.5 Goals")->where("published", true)->exists()){
             $oneFiveGoals = Fixture::where("published_fixtures_id", FixtureId::where("category", "1.5 Goals")->where("published", true)->first()->published_fixtures_id)->count();
         }else{
             $oneFiveGoals = 0;
