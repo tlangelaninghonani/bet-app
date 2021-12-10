@@ -11,7 +11,7 @@
     --gap: 10px;
     --shadow-thick: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     --shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-    --primary-color: green;
+    --primary-color: rgb(0, 126, 0);
     --secondary-color: rgb(5, 5, 5);
     --faint-primary-color: #c9dbf8;
     --primary-color-header: rgb(255, 225, 199);
