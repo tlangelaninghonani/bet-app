@@ -16,14 +16,12 @@
 <body>
     <div class="header-home">
         <div class="display-flex-align">
-            <span class="material-icons-round icon-mid" onclick="redirectBack()">
-            arrow_back
-            </span>
-            <span class="app-name"><span class="app-name-bold">Mabuza</span> BetAssistant</span>
+            <span class="app-name"><span class="app-name-bold">Signing up - Personal info</span></span>
         </div>
     </div>
     <div class="banner-home">
-        <img src="https://gianlucadimarzio.com/images/kane_tottenham_getty_gallery_.jpg?p=intextimg&s=1bee95d2d21d07086ffca5fa7e6ab516" alt="">
+        <div class="banner-layer"></div>
+        <img src="https://cdn.vox-cdn.com/thumbor/5bnClWCXpLRyGHPOSHnO8eBfq5A=/0x0:2011x2569/1200x800/filters:focal(848x261:1168x581)/cdn.vox-cdn.com/uploads/chorus_image/image/67598711/usa_today_14979100.0.jpg" alt="">
     </div>
     <div class="curved-top-home">
         <div class="shadow-patch"></div>
@@ -49,7 +47,7 @@
                     <span class="material-icons-sharp">
                     account_circle
                     </span>
-                    <input type="text" name="fullname" placeholder="Enter your Full name" required>
+                    <input type="text" name="fullname" placeholder="Full name" required>
                 </div>
             </p>
             <p>
@@ -91,7 +89,7 @@
                         <span class="material-icons-round">
                         call
                         </span>
-                        <input type="number" name="phonenumber" maxlength="10" minlength="10" placeholder="Enter your phone number">
+                        <input type="number" name="phonenumber" maxlength="10" minlength="10" placeholder="Phone number">
                     </div>
                 </p>
             </div>
@@ -101,7 +99,7 @@
                         <span class="material-icons-round">
                         email
                         </span>
-                        <input type="email" name="email" placeholder="Enter your email">
+                        <input type="email" name="email" placeholder="Email">
                     </div>
                 </p>
             </div>
@@ -129,5 +127,13 @@
             </p>
         </form>
     </div>
+    <script>
+       setTimeout(() => {
+            for (let i = 0; i < document.querySelectorAll("input").length; i++) {
+                const element = document.querySelectorAll("input")[i];
+                element.value = "";
+            }   
+       }, 600);
+    </script>
 </body>
 </html>

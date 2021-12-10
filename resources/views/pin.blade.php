@@ -41,7 +41,7 @@
                     <span class="material-icons-sharp">
                     dialpad
                     </span>
-                    <input type="password" maxlength="5" minlength="5" name="pin" placeholder="Enter your pin" required>
+                    <input type="password" maxlength="5" minlength="5" name="pin" placeholder="Pin" required>
                 </div>
             </p>
             <p>

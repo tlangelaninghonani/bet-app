@@ -53,7 +53,7 @@
                     <span class="material-icons-sharp">
                     account_circle
                     </span>
-                    <input type="text" name="accountholder" placeholder="Enter account holder name" required>
+                    <input type="text" name="accountholder" placeholder="Account holder name" required>
                 </div>
             </p>
             <p>
@@ -61,7 +61,7 @@
                     <span class="material-icons-round">
                     payment
                     </span>
-                    <input type="number" name="accountnumber" placeholder="Enter account number" required>
+                    <input type="number" name="accountnumber" placeholder="Account number" required>
                 </div>
             </p>
             <p>

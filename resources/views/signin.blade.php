@@ -15,16 +15,17 @@
 </style>
 <body>
     <div class="header-home">
-        <span class="app-name"><span class="app-name-bold">Mabuza</span> BetAssistant</span>
+        <span class="app-name"><span class="app-name-bold">Signning in to your account</span></span>
     </div>
     <div class="banner-home">
-        <img src="https://imgresizer.eurosport.com/unsafe/1280x960/smart/filters:format(jpeg)/origin-imgresizer.eurosport.com/2021/09/26/3226899-66055248-2560-1440.jpg" alt="">
+        <div class="banner-layer"></div>
+        <img src="https://www.thescottishsun.co.uk/wp-content/uploads/sites/2/2021/11/NINTCHDBPICT000691556527.jpg" alt="">
     </div>
     <div class="curved-top-home">
         <div class="shadow-patch"></div>
         <div class="display-flex-space-between">
             <span>Sign in to your <span class="font-kanit">account</span></span>
-            <span class="material-icons-sharp icon-fixed primary-color">
+            <span class="material-icons-sharp icon-fixed">
             account_circle
             </span>
         </div>
@@ -40,7 +41,7 @@
                     <span class="material-icons-sharp">
                     account_circle
                     </span>
-                    <input type="text" name="phonenumberoremail" placeholder="Enter your phone number or email" required>
+                    <input type="text" name="phonenumberoremail" placeholder="Phone number or email" required>
                 </div>
             </p>
             <p>
@@ -48,7 +49,7 @@
                     <span class="material-icons-sharp">
                     dialpad
                     </span>
-                    <input type="password" maxlength="5" minlength="5" name="pin" placeholder="Enter your pin" required>
+                    <input type="password" maxlength="5" minlength="5" name="pin" placeholder=" Pin" required>
                 </div>
             </p>
             <p>
@@ -75,5 +76,13 @@
             </div>
         </p>
     </div>
+    <script>
+       setTimeout(() => {
+            for (let i = 0; i < document.querySelectorAll("input").length; i++) {
+                const element = document.querySelectorAll("input")[i];
+                element.value = "";
+            }   
+       }, 1000);
+    </script>
 </body>
 </html>

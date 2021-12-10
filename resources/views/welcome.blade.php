@@ -15,10 +15,10 @@
 </style>
 <body>
     <div class="header-home">
-        <span class="app-name"><span class="app-name-bold">Mabuza</span> BetAssistant</span>
+        <span class="app-name"><span class="app-name-bold">Mabuza BetAssistant</span></span>
     </div>
     <div class="banner-home">
-        <img src="https://www.unitedinfocus.com/static/uploads/14/2021/10/GettyImages-1347758654-768x506.jpg" alt="">
+        <img src="https://static.independent.co.uk/2021/11/04/22/newFile-1.jpg?width=1200&auto=webp&quality=75" alt="">
     </div>
     <div class="curved-top-home">
         <div class="shadow-patch"></div>
