@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@800&display=swap');
-body{
-    background-color: white;
-    overflow: auto;
-    margin: 0;
-}
-
-
 
 ::-webkit-scrollbar {
     display: none;
@@ -18,12 +11,15 @@ body{
     --gap: 10px;
     --shadow-thick: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     --shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-    --primary-color: red;
+    --primary-color: rgb(0, 0, 0);
+    --secondary-color: rgb(0, 0, 0);
     --faint-primary-color: #c9dbf8;
+    --primary-color-header: white;
+    --primary-color-header-color: black;
 }
 
 *{
-    color: white;
+    color: var(--secondary-color);
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
 }
@@ -38,7 +34,7 @@ body{
 .amount{
     padding: 10px 25px;
     box-shadow: var(--shadow);
-    border-radius: 40px;
+    border-radius: 15px;
     display: flex;
     align-items: center;
     gap: var(--gap);
@@ -64,8 +60,8 @@ body{
     align-items: center;
     gap: var(--gap);
     padding: 16px 30px;
-    background-color: black;
-    border-radius: 40px;
+    background-color: var(--secondary-color);
+    border-radius: 15px;
     margin: var(--padding);
 }
 
@@ -74,8 +70,19 @@ body{
     box-shadow: var(--shadow);
 }
 
+.primary-color-text{
+    color: var(--primary-color) !important;
+}
+
 .primary-color{
     background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+body{
+    background-color: white;
+    overflow: auto;
+    margin: 0;
 }
 
 .primary-color *{
@@ -87,11 +94,11 @@ body{
 }
 
 .faint-primary-color *{
-    color: black !important;
+    color: var(--secondary-color) !important;
 }
 
 .auth-button *{
-    color: black !important;
+    color: var(--secondary-color) !important;
     font-family: 'Kanit', sans-serif;
 }
 
@@ -114,7 +121,7 @@ body{
     padding: 10px;
     box-shadow: var(--shadow);
     border-radius: 50%;
-    background-color: black;
+    background-color: var(--secondary-color);
     color: white;
     margin: var(--padding);
 }
@@ -145,7 +152,7 @@ body{
 }
 
 .bet-number *{
-    color: black !important;
+    color: var(--secondary-color) !important;
     font-family: 'Kanit', sans-serif;
 }
 
@@ -165,7 +172,7 @@ input:focus ,select:focus{
 }
 
 .selected{
-    background-color: black;
+    background-color: var(--secondary-color);
 }
 
 .selected *{
@@ -176,7 +183,7 @@ input:focus ,select:focus{
     padding: 16px 30px;
     box-shadow: var(--shadow);
     white-space: nowrap;
-    border-radius: 40px;
+    border-radius: 15px;
 }
 
 .betting-companies{
@@ -190,7 +197,7 @@ input:focus ,select:focus{
     padding: 16px 30px;
     box-shadow: var(--shadow);
     white-space: nowrap;
-    border-radius: 40px;
+    border-radius: 15px;
 }
 
 .football-categories{
@@ -204,7 +211,7 @@ input:focus ,select:focus{
     padding: 16px 30px;
     box-shadow: var(--shadow);
     white-space: nowrap;
-    border-radius: 40px;
+    border-radius: 15px;
     display: flex;
     align-items: center;
     gap: var(--gap);
@@ -229,7 +236,7 @@ input:focus ,select:focus{
     padding: 16px 30px;
     box-shadow: var(--shadow);
     white-space: nowrap;
-    border-radius: 40px;
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -239,7 +246,7 @@ input:focus ,select:focus{
     padding: 16px 30px;
     box-shadow: var(--shadow);
     white-space: nowrap;
-    border-radius: 40px;
+    border-radius: 15px;
 }
 
 select {
@@ -254,7 +261,7 @@ input:-webkit-autofill::first-line{
 .curved-top-plain{
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    background-color: black;
+    background-color: var(--secondary-color);
     padding: var(--padding);
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     
@@ -282,7 +289,7 @@ input:-webkit-autofill::first-line{
     align-items: center;
     gap: var(--gap);
     background-color: var(--input-silver);
-    border-radius: 40px;
+    border-radius: 15px;
     padding-left: 18px;
 }
 
@@ -296,7 +303,7 @@ input, select{
     width: 100%;
     box-sizing: border-box;
     background-color: inherit;
-    border-radius: 40px;
+    border-radius: 15px;
 }
 
 input:-webkit-autofill {
@@ -360,7 +367,7 @@ input:-webkit-autofill {
     right: 0;
     bottom: 0;
     width: 50%;
-    background-color: black;
+    background-color: var(--secondary-color);
     z-index: 10;
     box-shadow: var(--shadow);
     padding: var(--padding);
@@ -382,8 +389,8 @@ input:-webkit-autofill {
     padding: 16px;
     box-shadow: var(--shadow);
     border-radius: 50%;
-    background-color: black !important;
-    color: white;
+    background-color: white !important;
+    color: black !important;
 }
 
 .dashboard{
@@ -401,8 +408,8 @@ input:-webkit-autofill {
 .add-fixture{
     padding: 16px 30px;
     box-shadow: var(--shadow);
-    border-radius: 40px;
-    background-color: black;
+    border-radius: 15px;
+    background-color: var(--secondary-color);
 }
 
 .add-fixture *{
@@ -420,9 +427,9 @@ input:-webkit-autofill {
     align-items: center;
     padding: 15px 25px;
     box-shadow: var(--shadow);
-    border-radius: 40px;
+    border-radius: 15px;
     gap: var(--gap);
-    background-color: black;
+    background-color: var(--secondary-color);
 }
 
 .profile-update *{
@@ -440,24 +447,24 @@ input:-webkit-autofill {
     align-items: center;
     padding: 15px 25px;
     box-shadow: var(--shadow);
-    border-radius: 40px;
+    border-radius: 15px;
     gap: var(--gap);
 }
 
 .curved-top-home *{
-    color: black;
+    color: var(--secondary-color);
 }
 
 .icon-fixed{
     padding: 18px;
-    background-color: black;
+    background-color: var(--secondary-color);
     color: white;
     box-shadow: var(--shadow);
     border-radius: 50%;
 }
 
 .curved-top *{
-    color: black;
+    color: var(--secondary-color);
 }
 
 img{
@@ -499,14 +506,14 @@ img{
 button{
     padding: 16px;
     width: 100%;
-    background-color: black;
+    background-color: var(--primary-color);
     display: flex;
     gap: var(--gap);
     justify-content: center;
     align-items: center;
     border: none;
     color: white !important;
-    border-radius: 40px;
+    border-radius: 15px;
 }
 
 .display-flex-end{
@@ -584,13 +591,13 @@ hr{
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: black;
+    background-color: var(--secondary-color);
     padding: 18px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px 5%;
-    border-radius: 40px;
+    border-radius: 15px;
     gap: var(--gap);
 }
 
@@ -608,7 +615,7 @@ hr{
     right: -5px;
     width: 50px;
     height: 50px;
-    background-color: black;
+    background-color: var(--secondary-color);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -618,6 +625,10 @@ hr{
 
 .fixtures-count *{
     color: white;
+}
+
+.norwrap{
+    white-space: nowrap;
 }
 
 .club-logo{
@@ -635,15 +646,30 @@ hr{
     height: 95px;
 }
 
+.fixtures-edit{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: var(--padding);
+    background-color: rgba(0, 0, 0, .7);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.fixtures-edit *{
+    color: white;
+}
+
 .white-button{
     background-color: white;
-    color: black !important;
-    border: 1px solid black;
+    color: var(--secondary-color) !important;
+    border: 1px solid var(--secondary-color);
     padding: 14px !important;
 }
 
 .white-button *{
-    color: black !important;
+    color: var(--secondary-color) !important;
 }
 
 .icon-font-small{
@@ -689,7 +715,7 @@ button *{
 
 .card{
     padding: 5px 20px;
-    background-color: black;
+    background-color: var(--secondary-color);
     border-radius: 15px;
 }
 
@@ -714,8 +740,13 @@ button *{
     padding: 0 25px;
 }
 
+.versus-margin{
+    margin: 0 25px;
+}
+
+
 .fixtures *{
-    color: black;
+    color: var(--secondary-color);
 }
 
 .fixtures-radius-top{
@@ -773,17 +804,25 @@ button *{
 }
 
 .header{
-    background-color: white;
+    background-color: var(--primary-color-header);
     padding: var(--padding);
     box-shadow: var(--shadow);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
 
+.header *{
+    color: var(--primary-color-header-color);
+}
+
 .header-fixtures{
-    background-color: white;
+    background-color: var(--primary-color-header);
     padding: var(--padding);
     box-shadow: var(--shadow);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+}
+
+.header-fixtures *{
+    color: var(--primary-color-header-color);
 }
