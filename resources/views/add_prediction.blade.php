@@ -66,7 +66,7 @@
                     <div class="display-flex-space-around">
                         <div class="text-align-center truncate">
                             <div class="input-box" style="padding: 0 15px;">
-                                <span class="material-icons-sharp">
+                                <span class="material-icons-sharp primary-color-text">
                                 groups
                                 </span>
                                 <input type="text" name="firstteamodds" placeholder="0.00" required>
@@ -75,7 +75,7 @@
                         </div>
                         <div class="text-align-center">
                             <div class="input-box" style="padding: 0 15px;">
-                                <span class="material-icons-sharp">
+                                <span class="material-icons-sharp primary-color-text">
                                 swap_horiz
                                 </span>
                                 <input type="text" name="drawodds" placeholder="0.00" required>
@@ -84,7 +84,7 @@
                         </div>
                         <div class="text-align-center truncate">
                             <div class="input-box" style="padding: 0 15px;">
-                                <span class="material-icons-sharp">
+                                <span class="material-icons-sharp primary-color-text">
                                 groups
                                 </span>
                                 <input type="text" name="secondteamodds" placeholder="0.00" required>

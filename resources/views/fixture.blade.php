@@ -16,20 +16,6 @@
     *{
         color: black;
     }
-    .fixtures-edit{
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        padding: var(--padding);
-        background-color: rgba(0, 0, 0, .5);
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-    }
-
-    .fixtures-edit *{
-        color: white;
-    }
 
     .input-box{
         display: flex;
@@ -65,7 +51,7 @@
             @method("POST")
             <p>
                 <div class="input-box">
-                    <span class="material-icons-sharp">
+                    <span class="material-icons-sharp primary-color-text">
                     groups
                     </span>
                     <input type="text" style="text-transform: capitalize" id="firstteam" name="firstteam" placeholder="First team" required>
@@ -79,7 +65,7 @@
             </div>
             <p>
                 <div class="input-box">
-                    <span class="material-icons-sharp">
+                    <span class="material-icons-sharp primary-color-text">
                     groups
                     </span>
                     <input type="text" style="text-transform: capitalize" id="secondteam" name="secondteam" placeholder="Second team" required>

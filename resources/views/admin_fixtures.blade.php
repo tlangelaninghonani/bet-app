@@ -353,12 +353,12 @@
                                     </form>
                                     <div class="display-flex-align">
                                         <div>
-                                            <span class="material-icons-round delete-fixure-icon" onclick="submitForm('editfixture{{ $fixture->id }}')">
+                                            <span class="material-icons-round delete-fixure-icon primary-color" onclick="submitForm('editfixture{{ $fixture->id }}')">
                                             edit
                                             </span>
                                         </div>
                                         <div>
-                                            <span class="material-icons-round delete-fixure-icon" onclick="submitForm('deletefixture{{ $fixture->id }}')">
+                                            <span class="material-icons-round delete-fixure-icon primary-color" onclick="submitForm('deletefixture{{ $fixture->id }}')">
                                             delete
                                             </span>
                                         </div>
