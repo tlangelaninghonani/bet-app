@@ -21,10 +21,11 @@
     }
 </style>
 <body>
-    <div class="header-plain">
-        <div class="display-flex-align">
-            <span class="app-name"><span class="app-name-bold">Mabuza</span> BetAssistant</span>
-        </div>
+    <div class="display-flex-space-between">
+        <span class="app-name"><span class="app-name-bold">Football categories</span></span>
+        <span class="material-icons-round" onclick="showHide('menu')">
+        more_vert
+        </span>
     </div>
     <div class="container">
         <p>
