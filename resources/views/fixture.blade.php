@@ -116,9 +116,6 @@
             <p>
                 <button>
                     <span>Next</span>
-                    <span class="material-icons-sharp">
-                    arrow_forward
-                    </span>
                 </button>
             </p>
         </form>

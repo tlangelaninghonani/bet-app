@@ -48,9 +48,6 @@
         <p>
             <button onclick="submitForm('purchaseform')">
                 <span>Get the predictions</span>
-                <span class="material-icons-sharp">
-                arrow_forward
-                </span>
             </button>
         </p>
        <!--<p>

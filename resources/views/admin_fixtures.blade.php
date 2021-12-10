@@ -45,9 +45,9 @@
         <div class="display-flex-space-between">
             <div class="text-align-center" onclick="redirect('/admin')">
                 <span class="material-icons-round">
-                home
+                dashboard
                 </span><br>
-                <span>Home</span>
+                <span>Dashboard</span>
             </div>
             <div class="text-align-center" onclick="redirect('/admin_fixtures')">
                 <span class="material-icons-round">
@@ -103,9 +103,6 @@
                         <span class="norwrap">Add fixture</span>
                     </div>
                     <div class="display-flex-align add-fixture versus-margin" onclick="submitForm('newfixtureform')">
-                        <span class="material-icons-round">
-                        add
-                        </span>
                         <span class="norwrap">New fixures</span>
                     </div>
                 @endif

@@ -54,9 +54,6 @@
             <p>
                 <button>
                     <span>Sign in</span>
-                    <span class="material-icons-sharp">
-                    arrow_forward
-                    </span>
                 </button>
             </p>
             <p>

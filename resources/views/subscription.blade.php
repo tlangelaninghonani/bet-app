@@ -82,9 +82,6 @@
             </p>
             <p>
                 <button onclick="redirect('/signup')">
-                    <span class="material-icons-sharp">
-                    published_with_changes
-                    </span>
                     <span>Activate ticket</span>
                 </button>
             </p>

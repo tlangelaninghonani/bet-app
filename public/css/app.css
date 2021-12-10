@@ -6,7 +6,7 @@
 }
 
 :root{
-    --input-silver: rgb(249, 249, 249);
+    --input-silver: rgb(245, 245, 245);
     --padding: 15px;
     --gap: 10px;
     --shadow-thick: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
@@ -16,6 +16,7 @@
     --faint-primary-color: #c9dbf8;
     --primary-color-header: white;
     --primary-color-header-color: black;
+    --padding-header: 30px 15px;
 }
 
 *{
@@ -111,7 +112,7 @@ body{
     padding: 15px;
     font-size: 25px;
     box-shadow: var(--shadow);
-    border-radius: 50%;
+    border-radius: 15px;
 }
 
 .icon-float{
@@ -120,7 +121,7 @@ body{
     right: 0;
     padding: 10px;
     box-shadow: var(--shadow);
-    border-radius: 50%;
+    border-radius: 15px;
     background-color: var(--secondary-color);
     color: white;
     margin: var(--padding);
@@ -147,7 +148,7 @@ body{
     align-items: center;
     padding: 5px;
     box-shadow: var(--shadow);
-    border-radius: 50%;
+    border-radius: 15px;
     background-color: white;
 }
 
@@ -381,14 +382,14 @@ input:-webkit-autofill {
 
 .delete-fixure-icon{
     padding: 10px;
-    border-radius: 50%;
+    border-radius: 15px;
     box-shadow: var(--shadow);
 }
 
 .new-fixture{
     padding: 16px;
     box-shadow: var(--shadow);
-    border-radius: 50%;
+    border-radius: 15px;
     background-color: white !important;
     color: black !important;
 }
@@ -460,7 +461,7 @@ input:-webkit-autofill {
     background-color: var(--secondary-color);
     color: white;
     box-shadow: var(--shadow);
-    border-radius: 50%;
+    border-radius: 15px;
 }
 
 .curved-top *{
@@ -570,7 +571,7 @@ button{
 .icon-shadow{
     padding: 10px;
     box-shadow: var(--shadow);
-    border-radius: 50%;
+    border-radius: 15px;
 }
 
 hr{
@@ -616,7 +617,7 @@ hr{
     width: 50px;
     height: 50px;
     background-color: var(--secondary-color);
-    border-radius: 50%;
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -684,7 +685,7 @@ hr{
     font-size: 70px !important;
     box-shadow: var(--shadow);
     padding: 30px;
-    border-radius: 50%;
+    border-radius: 15px;
 }
 
 .icon-mid{
@@ -765,7 +766,7 @@ button *{
 }
 
 .header-plain{
-    padding: var(--padding);
+    padding: var(--padding-header);
 }
 
 .app-name{
@@ -783,12 +784,12 @@ button *{
 }
 
 .header-home{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 5;
-    padding: var(--padding);
+    padding: var(--padding-header);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -805,7 +806,7 @@ button *{
 
 .header{
     background-color: var(--primary-color-header);
-    padding: var(--padding);
+    padding: var(--padding-header);
     box-shadow: var(--shadow);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -817,7 +818,7 @@ button *{
 
 .header-fixtures{
     background-color: var(--primary-color-header);
-    padding: var(--padding);
+    padding: var(--padding-header);
     box-shadow: var(--shadow);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;

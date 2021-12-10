@@ -28,23 +28,55 @@
         </p>
         <p>
             <div class="display-flex-align">
-                <div class="leagues">
-                    <span>Double score</span>&#183;
-                    <span>Take the risk</span>&#183;
-                    <span>Both to score</span>&#183;
-                    <span>2.5 Goals</span>&#183;
-                    <span>1.5 Goals</span>&#183;
-                    <span>Sure 2</span>&#183;
-                    <span>Single combo</span>
+                <div class="display-flex-auto">
+                    <div class="display-flex-align">
+                        <span class="material-icons-round">
+                        close
+                        </span>
+                        <span>Double score</span>
+                    </div>
+                    <div class="display-flex-align">
+                        <span class="material-icons-round">
+                        question_mark
+                        </span>
+                        <span>Take the risk</span>
+                    </div>
+                    <div class="display-flex-align">
+                        <span class="material-icons-round">
+                        swap_vert
+                        </span>
+                        <span>Both to score</span>
+                    </div>
+                    <div class="display-flex-align">
+                        <span class="material-icons-round">
+                        hdr_strong
+                        </span>
+                        <span>2.5 Goals</span>
+                    </div>
+                    <div class="display-flex-align">
+                        <span class="material-icons-round">
+                        hdr_weak
+                        </span>
+                        <span>1.5 Goals</span>
+                    </div>
+                    <div class="display-flex-align">
+                        <span class="material-icons-round">
+                        check_circle
+                        </span>
+                        <span>Sure 2</span>
+                    </div>
+                    <div class="display-flex-align">
+                        <span class="material-icons-round">
+                        merge_type
+                        </span>
+                        <span>Single combo</span>
+                    </div>
                 </div>
             </div>
         </p>
         <p>
             <button onclick="redirect('/signup')">
                 <span>Get started</span>
-                <span class="material-icons-sharp">
-                arrow_forward
-                </span>
             </button>
         </p>
     </div>

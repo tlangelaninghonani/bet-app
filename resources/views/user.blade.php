@@ -94,9 +94,6 @@
             </p>
             <p>
                 <button>
-                    <span class="material-icons-round">
-                    verified
-                    </span>
                     <span>Verify payment</span>
                 </button>
             </p>

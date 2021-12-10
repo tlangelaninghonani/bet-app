@@ -47,9 +47,6 @@
             <p>
                 <button>
                     <span>Create account</span>
-                    <span class="material-icons-sharp">
-                    arrow_forward
-                    </span>
                 </button>
             </p>
         </form>

@@ -21,11 +21,13 @@
     }
 </style>
 <body>
-    <div class="display-flex-space-between">
-        <span class="app-name"><span class="app-name-bold">Football categories</span></span>
-        <span class="material-icons-round" onclick="showHide('menu')">
-        more_vert
-        </span>
+    <div class="header-plain">
+        <div class="display-flex-align">
+            <span class="material-icons-round icon-mid" onclick="redirectBack()">
+            arrow_back
+            </span>
+            <span class="app-name"><span class="app-name-bold">Mabuza</span> BetAssistant</span>
+        </div>
     </div>
     <div class="container">
         <p>
@@ -41,9 +43,6 @@
         <p>
             <button onclick="redirect('/football_categories')">
                 <span>Get the predictions</span>
-                <span class="material-icons-sharp">
-                arrow_forward
-                </span>
             </button>
         </p>
     </div>

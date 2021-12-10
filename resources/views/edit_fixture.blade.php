@@ -337,9 +337,6 @@
                 </div>
                 <p>
                     <button>
-                        <span class="material-icons-sharp">
-                        update
-                        </span>
                         <span>update changes</span>
                     </button>
                 </p>

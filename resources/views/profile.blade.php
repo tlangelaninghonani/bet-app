@@ -35,11 +35,12 @@
     </div>
     <div class="header-fixtures">
         <div class="display-flex-space-between">
-            <span class="app-name"><span class="app-name-bold">Account</span></span>
+            <span class="app-name"><span class="app-name-bold">Mabuza</span> BetAssistant</span>
             <span class="material-icons-round" onclick="showHide('menu')">
             more_vert
             </span>
         </div>
+        <br>
         <div class="display-flex-space-between">
             <div class="text-align-center" onclick="redirect('/football_categories')">
                 <span class="material-icons-round">
@@ -92,9 +93,6 @@
         </p>
         <p>
             <button onclick="redirect('/signup')">
-                <span class="material-icons-sharp">
-                update
-                </span>
                 <span>Save changes</span>
             </button>
         </p>

@@ -105,9 +105,6 @@ class SignupController extends Controller
                 "user" => $user
             ]);
         }
-        $user = User::find(Session::get("userid"));
-        return view("free_trial", [
-            "user" => $user
-        ]);
+        return back();
     }
 }

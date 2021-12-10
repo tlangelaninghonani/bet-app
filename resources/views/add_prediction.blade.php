@@ -278,9 +278,6 @@
                 <p>
                     <button>
                         <span>Add fixture</span>
-                        <span class="material-icons-sharp">
-                        arrow_forward
-                        </span>
                     </button>
                 </p>
             </div>

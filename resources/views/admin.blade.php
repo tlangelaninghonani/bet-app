@@ -44,9 +44,9 @@
         <div class="display-flex-space-between">
             <div class="text-align-center" onclick="redirect('/admin')">
                 <span class="material-icons-round">
-                home
+                dashboard
                 </span><br>
-                <span>Home</span>
+                <span>Dashboard</span>
             </div>
             <div class="text-align-center" onclick="redirect('/admin_fixtures')">
                 <span class="material-icons-round">

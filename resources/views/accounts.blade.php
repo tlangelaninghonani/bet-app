@@ -41,9 +41,9 @@
         <div class="display-flex-space-between">
             <div class="text-align-center" onclick="redirect('/admin')">
                 <span class="material-icons-round">
-                home
+                dashboard
                 </span><br>
-                <span>Home</span>
+                <span>Dashboard</span>
             </div>
             <div class="text-align-center" onclick="redirect('/admin_fixtures')">
                 <span class="material-icons-round">
@@ -75,7 +75,7 @@
         <!--onclick="redirect('/user/{{ $account->id }}')"-->
             <div class="display-flex-align" >
                 <span class="material-icons-round icon-big">
-                account_circle
+                account_box
                 </span>
                 <div class="truncate">
                     <span class="title">{{ $account->full_name }}</span><br>

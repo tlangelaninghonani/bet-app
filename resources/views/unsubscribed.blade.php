@@ -56,9 +56,6 @@
         @endif
         <p>
             <button onclick="redirect('/subscription')">
-                <span class="material-icons-round">
-                payment
-                </span>
                 <span>Subscribe</span>
             </button>
         </p>
