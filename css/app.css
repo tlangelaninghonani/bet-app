@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@800&display=swap');
-body{
-    background-color: white;
-    overflow: auto;
-    margin: 0;
-}
-
-
 
 ::-webkit-scrollbar {
     display: none;
@@ -84,6 +77,12 @@ body{
 .primary-color{
     background-color: var(--primary-color) !important;
     color: white !important;
+}
+
+body{
+    background-color: white;
+    overflow: auto;
+    margin: 0;
 }
 
 .primary-color *{
@@ -801,13 +800,15 @@ button *{
 }
 
 .header-home *{
-    color: var(--primary-color-header-color) !important;
+    color: white !important;
 }
 
 .header{
     background-color: var(--primary-color-header);
     padding: var(--padding);
     box-shadow: var(--shadow);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .header *{
@@ -818,6 +819,8 @@ button *{
     background-color: var(--primary-color-header);
     padding: var(--padding);
     box-shadow: var(--shadow);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .header-fixtures *{

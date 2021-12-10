@@ -800,13 +800,15 @@ button *{
 }
 
 .header-home *{
-    color: var(--primary-color-header-color) !important;
+    color: white !important;
 }
 
 .header{
     background-color: var(--primary-color-header);
     padding: var(--padding);
     box-shadow: var(--shadow);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .header *{
@@ -817,6 +819,8 @@ button *{
     background-color: var(--primary-color-header);
     padding: var(--padding);
     box-shadow: var(--shadow);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .header-fixtures *{
