@@ -76,7 +76,7 @@
         <!--onclick="redirect('/user/{{ $account->id }}')"-->
             <div class="display-flex-align" >
                 <span class="material-icons-round icon-big">
-                account_box
+                person
                 </span>
                 <div class="truncate">
                     <span class="title">{{ $account->full_name }}</span><br>

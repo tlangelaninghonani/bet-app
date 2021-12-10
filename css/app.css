@@ -6,18 +6,19 @@
 }
 
 :root{
-    --input-silver: rgb(250, 250, 250);
+    --input-silver: rgb(255, 255, 255);
     --padding: 15px;
     --gap: 10px;
     --shadow-thick: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     --shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-    --primary-color: rgb(0, 51, 0);
-    --secondary-color: rgb(10, 10, 10);
+    --primary-color: rgb(0, 97, 0);
+    --secondary-color: rgb(5, 5, 5);
     --faint-primary-color: #c9dbf8;
     --primary-color-header: rgb(255, 225, 199);
     --primary-color-header-color: rgb(0, 0, 0);
     --padding-header: var(--padding);
-    --body-color: rgb(255, 254, 253);
+    --body-color: rgb(255, 245, 234);
+    --header-bottom-padding: 80px;
 }
 
 *{
@@ -86,6 +87,10 @@ body{
     background-color: var(--body-color);
     overflow: auto;
     margin: 0;
+}
+
+html{
+    background-color: var(--body-color);
 }
 
 .primary-color *{
@@ -416,7 +421,7 @@ input:-webkit-autofill {
 }
 
 .add-fixture *{
-    color: white;
+    color: white !important;
 }
 
 .profile-update{
@@ -818,6 +823,7 @@ button *{
 .header{
     background-color: var(--primary-color-header);
     padding: var(--padding-header);
+    padding-bottom: var(--header-bottom-padding);
 }
 
 .header *{
@@ -827,7 +833,7 @@ button *{
 .header-fixtures{
     background-color: var(--primary-color-header);
     padding: var(--padding-header);
-    padding-bottom: 80px;
+    padding-bottom: var(--header-bottom-padding);
 }
 
 .header-fixtures *{
