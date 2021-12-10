@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@800&display=swap');
-body{
-    background-color: white;
-    overflow: auto;
-    margin: 0;
-}
-
-
 
 ::-webkit-scrollbar {
     display: none;
@@ -21,6 +14,8 @@ body{
     --primary-color: rgb(0, 0, 0);
     --secondary-color: rgb(0, 0, 0);
     --faint-primary-color: #c9dbf8;
+    --primary-color-header: white;
+    --primary-color-header-color: black;
 }
 
 *{
@@ -82,6 +77,12 @@ body{
 .primary-color{
     background-color: var(--primary-color) !important;
     color: white !important;
+}
+
+body{
+    background-color: white;
+    overflow: auto;
+    margin: 0;
 }
 
 .primary-color *{
@@ -799,25 +800,25 @@ button *{
 }
 
 .header-home *{
-    color: white !important;
+    color: var(--primary-color-header-color) !important;
 }
 
 .header{
-    background-color: var(--primary-color);
+    background-color: var(--primary-color-header);
     padding: var(--padding);
     box-shadow: var(--shadow);
 }
 
 .header *{
-    color: white;
+    color: var(--primary-color-header-color);
 }
 
 .header-fixtures{
-    background-color: var(--primary-color);
+    background-color: var(--primary-color-header);
     padding: var(--padding);
     box-shadow: var(--shadow);
 }
 
 .header-fixtures *{
-    color: white;
+    color: var(--primary-color-header-color);
 }

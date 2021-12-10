@@ -21,6 +21,8 @@ body{
     --primary-color: rgb(0, 0, 0);
     --secondary-color: rgb(0, 0, 0);
     --faint-primary-color: #c9dbf8;
+    --primary-color-header: white;
+    --primary-color-header-color: black;
 }
 
 *{
@@ -799,25 +801,25 @@ button *{
 }
 
 .header-home *{
-    color: white !important;
+    color: var(--primary-color-header-color) !important;
 }
 
 .header{
-    background-color: var(--primary-color);
+    background-color: var(--primary-color-header);
     padding: var(--padding);
     box-shadow: var(--shadow);
 }
 
 .header *{
-    color: white;
+    color: var(--primary-color-header-color);
 }
 
 .header-fixtures{
-    background-color: var(--primary-color);
+    background-color: var(--primary-color-header);
     padding: var(--padding);
     box-shadow: var(--shadow);
 }
 
 .header-fixtures *{
-    color: white;
+    color: var(--primary-color-header-color);
 }
