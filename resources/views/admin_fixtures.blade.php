@@ -61,35 +61,21 @@
                 </span><br>
                 <span>Accounts</span>
             </div>
-            <span class="material-icons-round new-fixture" onclick="submitForm('newfixtureform')">
-            add
-            </span>
-            </div>
         </div>
     </div>
     <div class="container">
-        @if($fixturesId)
-        <div class="display-flex-space-between">
-        @else
-        <div class="display-flex-end">
-        @endif
+        <div class="fixtures-auto">
             @if($fixturesId)
+                <form action="/delete/fixtures/{{ $fixtureId }}" method="POST" class="display-none" id="deletefixtureAll">
+                    @csrf
+                    @method("POST")
+                </form>
+                <form action="/publish/{{ $fixturesId->id }}" method="POST" class="display-none" id="publishform">
+                    @csrf
+                    @method("POST")
+                </form>
                 @if($fixturesId->published)
-                    <!--<form action="/delete/fixtures/all" method="POST" class="display-none" id="deletefixtureAll">
-                        @csrf
-                        @method("POST")
-                    </form>
-                    <form action="/publish/{{ $fixturesId->id }}" method="POST" class="display-none" id="publishform">
-                        @csrf
-                        @method("POST")
-                    </form>
-                    <div class="display-flex-align" onclick="submitForm('deletefixtureAll')">
-                        <span>Delete</span>
-                    </div>
-                    <div class="display-flex-align">    
-                        <span onclick="submitForm('publishform')">Publish</span>
-                    </div>-->
-                    <div>
+                    <div class="versus-margin">
                         <div class="display-flex-align">
                             <span class="material-icons-round">
                             published_with_changes
@@ -97,80 +83,37 @@
                             <span class="title-mid">Published</span>
                         </div>
                     </div>
-                    <div class="display-flex-align add-fixture" onclick="redirect('/fixture/{{ $fixtureId }}')">
-                        <span class="material-icons-round">
-                        add
-                        </span>
-                        <span>Add</span>
-                    </div>
                 @else
-                    <form action="/delete/fixtures/{{ $fixtureId }}" method="POST" class="display-none" id="deletefixtureAll">
-                        @csrf
-                        @method("POST")
-                    </form>
-                    <form action="/publish/{{ $fixturesId->id }}" method="POST" class="display-none" id="publishform">
-                        @csrf
-                        @method("POST")
-                    </form>
-                    <div class="display-flex-align" onclick="submitForm('deletefixtureAll')">
+                    <div class="display-flex-align versus-margin" onclick="submitForm('deletefixtureAll')">
                         <span class="material-icons-round">
                         delete
                         </span>    
                         <span>Delete</span>
                     </div>
-                    <div class="display-flex-align">  
+                    <div class="display-flex-align versus-margin">  
                         <span class="material-icons-round">
                         published_with_changes
                         </span>   
                         <span onclick="submitForm('publishform')">Publish</span>
                     </div>
-                    <div class="display-flex-align add-fixture" onclick="redirect('/fixture/{{ $fixtureId }}')">
+                    <div class="display-flex-align versus-margin" onclick="redirect('/fixture/{{ $fixtureId }}')">
                         <span class="material-icons-round">
                         add
                         </span>
-                        <span>Add</span>
+                        <span class="norwrap">Add fixture</span>
+                    </div>
+                    <div class="display-flex-align add-fixture versus-margin" onclick="submitForm('newfixtureform')">
+                        <span class="material-icons-round">
+                        add
+                        </span>
+                        <span class="norwrap">New fixures</span>
                     </div>
                 @endif
-            @else
-                <!--<div>
-                    <div class="display-flex-align">
-                        <span class="material-icons-round">
-                        published_with_changes
-                        </span>
-                        <span class="title-mid">Published</span>
-                    </div>
-                    <div>
-                        <span class="title-small">{{ $admin->betting_company }}</span>
-                    </div>
-                </div>
-                <form action="/new_fixture" method="POST" class="display-none" id="newfixtureform">
-                    @csrf
-                    @method("POST")
-                </form>
-                <form action="/new_fixture" method="POST" class="display-none" id="newfixtureform">
-                    @csrf
-                    @method("POST")
-                </form>
-                <div class="display-flex-align add-fixture" onclick="submitForm('newfixtureform')">
-                    <span class="material-icons-round">
-                    add
-                    </span>
-                    <span>New fixtures</span>
-                </div>
-                <div class="display-flex-align add-fixture" onclick="submitForm('newfixtureform')">
-                    <span class="material-icons-round">
-                    add
-                    </span>
-                    <span>New fixtures</span>
-                </div>-->
             @endif
         </div>
         <p>
             @if($admin->published_fixtures_id > 1)  
                 <div class="display-flex-align">
-                    <span class="material-icons-round icon-padding">
-                    swipe_left
-                    </span>
                     <div class="football-categories">
                         @foreach($fixturesIdClass::all() as $fixturesIdCl)
                             @if($fixturesIdCl->published_fixtures_id == $fixtureId)

@@ -28,9 +28,6 @@
         </p>
         <p>
             <div class="display-flex-align">
-                <span class="material-icons-round icon-padding">
-                swipe_left
-                </span>
                 <div class="leagues">
                     <span>Double score</span>&#183;
                     <span>Take the risk</span>&#183;

@@ -235,9 +235,6 @@
                     </div>
                     <p>
                         <div class="display-flex-align">
-                            <span class="material-icons-round icon-padding">
-                            swipe_left
-                            </span>
                             <div class="display-flex-auto">
                                 <div onclick="selectedOutcome(this, 'selected', '{{ $fixture->first_team }} win')">
                                     <span>{{ $fixture->first_team }} win</span>
@@ -314,9 +311,6 @@
                     </div>
                     <p>
                         <div class="display-flex-align">
-                            <span class="material-icons-round icon-padding">
-                            swipe_left
-                            </span>
                             <div class="display-flex-auto">
                                 <div onclick="selectedOutcome(this, 'selected', '{{ $fixture->first_team }} win')">
                                     <span>{{ $fixture->first_team }} win</span>

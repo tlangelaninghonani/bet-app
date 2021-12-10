@@ -113,9 +113,6 @@
                     </div>
                     <p>
                         <div class="display-flex-align">
-                            <span class="material-icons-round icon-padding">
-                            swipe_left
-                            </span>
                             <div class="display-flex-auto">
                                 <div onclick="selectedOutcome(this, 'selected', '{{ Session::get('firstteam') }} win')">
                                     <span>{{ Session::get("firstteam") }} win</span>
@@ -192,9 +189,6 @@
                     </div>
                     <p>
                         <div class="display-flex-align">
-                            <span class="material-icons-round icon-padding">
-                            swipe_left
-                            </span>
                             <div class="display-flex-auto">
                                 <div onclick="selectedOutcome(this, 'selected', '{{ Session::get('firstteam') }} win')">
                                     <span>{{ Session::get("firstteam") }} win</span>

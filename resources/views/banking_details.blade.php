@@ -38,9 +38,6 @@
             </div>
             <p>
                 <div class="display-flex-align">
-                    <span class="material-icons-round icon-padding">
-                    swipe_left
-                    </span>
                     <div class="display-flex-auto">
                         @foreach($banks as $bank)
                             <div onclick="selectedBank(this, 'selected', '{{ $bank }}')">

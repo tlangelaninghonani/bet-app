@@ -18,8 +18,8 @@ body{
     --gap: 10px;
     --shadow-thick: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     --shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-    --primary-color: rgb(163, 0, 0);
-    --secondary-color: rgb(25, 25, 25);
+    --primary-color: rgb(0, 0, 0);
+    --secondary-color: rgb(0, 0, 0);
     --faint-primary-color: #c9dbf8;
 }
 
@@ -388,8 +388,8 @@ input:-webkit-autofill {
     padding: 16px;
     box-shadow: var(--shadow);
     border-radius: 50%;
-    background-color: var(--secondary-color) !important;
-    color: white;
+    background-color: white !important;
+    color: black !important;
 }
 
 .dashboard{
@@ -626,6 +626,10 @@ hr{
     color: white;
 }
 
+.norwrap{
+    white-space: nowrap;
+}
+
 .club-logo{
     white-space: nowrap;
 }
@@ -734,6 +738,11 @@ button *{
 .versus{
     padding: 0 25px;
 }
+
+.versus-margin{
+    margin: 0 25px;
+}
+
 
 .fixtures *{
     color: var(--secondary-color);
