@@ -48,7 +48,7 @@ Route::get('/free_trial_fixtures', [App\Http\Controllers\FixtureController::clas
 Route::post('/publish/{fixtureToPublishId}', [App\Http\Controllers\FixtureController::class, "publishFixtures"]);
 Route::get('/subscription', [App\Http\Controllers\SubscriptionController::class, "index"]);
 Route::get('/user/{id}', [App\Http\Controllers\AccountController::class, "viewUser"]);
-Route::post('/user/{id}/payment/verified', [App\Http\Controllers\AccountController::class, "verifyPayment"]);
+Route::post('/ticket/activate', [App\Http\Controllers\FixtureController::class, "activateTicket"]);
 Route::post('/purchase', [App\Http\Controllers\FixtureController::class, "purchase"]);
 Route::post('/delete/{id}', [App\Http\Controllers\FixtureController::class, "deleteFixture"]);
 Route::post('/delete/fixtures/{fixtureId}', [App\Http\Controllers\FixtureController::class, "deleteFixtureAll"]);
@@ -64,3 +64,5 @@ Route::get('/football_categories', [App\Http\Controllers\FixtureController::clas
 Route::post('/google_auth', [App\Http\Controllers\SignupController::class, "googleAuth"]);
 Route::get('/google_auth_callback', [App\Http\Controllers\SignupController::class, "googleAuthCallback"]);
 Route::post('/signup/phone_number', [App\Http\Controllers\SignupController::class, "phoneNumber"]);
+
+

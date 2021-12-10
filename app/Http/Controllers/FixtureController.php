@@ -9,6 +9,7 @@ use App\Models\Book;
 use App\Models\FixtureId;
 use App\Models\Subscription;
 use App\Models\Admin;
+use App\Models\Ticket;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB;
 
@@ -78,6 +79,27 @@ class FixtureController extends Controller
         ]);
     }
 
+    public function activateTicket(Request $req){
+        $user = User::find(Session::get("userid"));
+        $subscription = Subscription::where("user_id", $user->id)->first();
+        foreach(Ticket::all() as $ticket){
+            if($ticket->ticket_number == $req->ticketnumber){
+                if(! $ticket->ticket_activated){
+                    $ticket->ticket_activated = true;
+                    $ticket->save();
+                    
+                    $subscription->balance += 10;
+                    $subscription->save();
+
+                    $user->state = "subscribed";
+                    $user->save();
+                    return redirect("/football_categories");
+                }
+            }
+        }
+        return back();
+    }
+
     public function deleteFixture($id){
         DB::table("fixtures")->where("id", $id)->delete();
         return redirect("/admin_fixtures");
@@ -101,6 +123,26 @@ class FixtureController extends Controller
         }
         $user = User::find(Session::get("userid"));
         $subscription = Subscription::where("user_id", $user->id)->first();
+     
+        if($user->state != "trial"){
+            if($subscription->balance < 1 && ! $subscription->paid){
+                return view("unsubscribed", [
+                    "subscription" => $subscription
+                ]);
+            }
+    
+            if(! $subscription->paid){
+                return view("home", [
+                    "subscription" => $subscription,
+                    "book" => Book::find(1),
+                ]);
+            }
+            if($user->state == "unsubscribed"){
+                return view("unsubscribed", [
+                    "subscription" => $subscription
+                ]);
+            }
+        }
 
         if((intval(date("d") - $user->signup_day)) > 7){
             $user->state = "unsubscribed";
@@ -111,33 +153,57 @@ class FixtureController extends Controller
             ]);
         }
 
-        if(intval(date("d")) > $subscription->paid_day){
-            if(intval(date("H")) > $subscription->paid_hour && intval(date("i")) > $subscription->paid_minutes){
-                $subscription->paid = false;
-                $subscription->save();
-            }
-        }
-     
-        if($user->state != "trial"){
-            if($subscription->balance < 5 && ! $subscription->paid){
-                return view("unsubscribed", [
-                    "subscription" => $subscription
-                ]);
-            }
-    
-            if(! $subscription->paid){
-                return view("home", [
-                    "subscription" => $subscription
-                ]);
-            }
-            if($user->state == "unsubscribed"){
-                return view("unsubscribed", [
-                    "subscription" => $subscription
-                ]);
-            }
+        if(FixtureId::where("category", "Double chance")->where("published", true)->exists()){
+            $doubleChance = Fixture::where("published_fixtures_id", FixtureId::where("category", "Double chance")->where("published", true)->first()->published_fixtures_id)->count();
+        }else{
+            $doubleChance = 0;
         }
 
-        return view("football_categories");
+        if(FixtureId::where("category", "Take the risk")->where("published", true)->exists()){
+            $takeTheRisk = Fixture::where("published_fixtures_id", FixtureId::where("category", "Take the risk")->where("published", true)->first()->published_fixtures_id)->count();
+        }else{
+            $takeTheRisk = 0;
+        }
+
+        if(FixtureId::where("category", "Both to score")->where("published", true)->exists()){
+            $bothToScore = Fixture::where("published_fixtures_id", FixtureId::where("category", "Both to score")->where("published", true)->first()->published_fixtures_id)->count();
+        }else{
+            $bothToScore = 0;
+        }
+
+        if(FixtureId::where("category", "2.5 Goals")->where("published", true)->exists()){
+            $twoFiveGoals = Fixture::where("published_fixtures_id", FixtureId::where("category", "2.5 Goals")->where("published", true)->first()->published_fixtures_id)->count();
+        }else{
+            $twoFiveGoals = 0;
+        }
+
+        if(FixtureId::where("category", "1.5 Goals")->where("published", true)->exists()){
+            $oneFiveGoals = Fixture::where("published_fixtures_id", FixtureId::where("category", "1.5 Goals")->where("published", true)->first()->published_fixtures_id)->count();
+        }else{
+            $oneFiveGoals = 0;
+        }
+
+        if(FixtureId::where("category", "Sure 2")->where("published", true)->exists()){
+            $sureTwo = Fixture::where("published_fixtures_id", FixtureId::where("category", "Sure 2")->first()->where("published", true)->published_fixtures_id)->count();
+        }else{
+            $sureTwo = 0;
+        }
+
+        if(FixtureId::where("category", "single combo")->where("published", true)->exists()){
+            $singleCombo = Fixture::where("published_fixtures_id", FixtureId::where("category", "single combo")->where("published", true)->first()->published_fixtures_id)->count();
+        }else{
+            $singleCombo = 0;
+        }
+
+        return view("football_categories", [
+            "doubleChance" => $doubleChance,
+            "takeTheRisk" => $takeTheRisk,
+            "bothToScore" => $bothToScore,
+            "twoFiveGoals" => $twoFiveGoals,
+            "oneFiveGoals" => $oneFiveGoals,
+            "sureTwo" => $sureTwo,
+            "singleCombo" => $singleCombo,
+        ]);
     }
 
     public function home(){
@@ -149,7 +215,8 @@ class FixtureController extends Controller
             $subscription = Subscription::where("user_id", $user->id)->first();
             return view("home", [
                 "subscription" => $subscription,
-                "user" => $user
+                "user" => $user,
+                "book" => Book::find(1),
             ]);
         }else{
             return redirect("/fixtures");
@@ -178,7 +245,56 @@ class FixtureController extends Controller
     }
 
     public function adminFootballCategories(Request $req){
-        return view("admin_football_categories");
+        if(FixtureId::where("category", "Double chance")->where("published", true)->exists()){
+            $doubleChance = Fixture::where("published_fixtures_id", FixtureId::where("category", "Double chance")->where("published", true)->first()->published_fixtures_id)->count();
+        }else{
+            $doubleChance = 0;
+        }
+
+        if(FixtureId::where("category", "Take the risk")->where("published", true)->exists()){
+            $takeTheRisk = Fixture::where("published_fixtures_id", FixtureId::where("category", "Take the risk")->where("published", true)->first()->published_fixtures_id)->count();
+        }else{
+            $takeTheRisk = 0;
+        }
+
+        if(FixtureId::where("category", "Both to score")->where("published", true)->exists()){
+            $bothToScore = Fixture::where("published_fixtures_id", FixtureId::where("category", "Both to score")->where("published", true)->first()->published_fixtures_id)->count();
+        }else{
+            $bothToScore = 0;
+        }
+
+        if(FixtureId::where("category", "2.5 Goals")->where("published", true)->exists()){
+            $twoFiveGoals = Fixture::where("published_fixtures_id", FixtureId::where("category", "2.5 Goals")->where("published", true)->first()->published_fixtures_id)->count();
+        }else{
+            $twoFiveGoals = 0;
+        }
+
+        if(FixtureId::where("category", "1.5 Goals")->exists()){
+            $oneFiveGoals = Fixture::where("published_fixtures_id", FixtureId::where("category", "1.5 Goals")->where("published", true)->first()->published_fixtures_id)->count();
+        }else{
+            $oneFiveGoals = 0;
+        }
+
+        if(FixtureId::where("category", "Sure 2")->where("published", true)->exists()){
+            $sureTwo = Fixture::where("published_fixtures_id", FixtureId::where("category", "Sure 2")->where("published", true)->first()->published_fixtures_id)->count();
+        }else{
+            $sureTwo = 0;
+        }
+
+        if(FixtureId::where("category", "single combo")->where("published", true)->exists()){
+            $singleCombo = Fixture::where("published_fixtures_id", FixtureId::where("category", "single combo")->where("published", true)->first()->published_fixtures_id)->count();
+        }else{
+            $singleCombo = 0;
+        }
+        return view("admin_football_categories", [
+            "doubleChance" => $doubleChance,
+            "takeTheRisk" => $takeTheRisk,
+            "bothToScore" => $bothToScore,
+            "twoFiveGoals" => $twoFiveGoals,
+            "oneFiveGoals" => $oneFiveGoals,
+            "sureTwo" => $sureTwo,
+            "singleCombo" => $singleCombo,
+        ]);
     }
 
     public function publishFixtures(Request $req, $fixtureToPublishId){
@@ -188,7 +304,7 @@ class FixtureController extends Controller
         $fixtureId->published = true;
         $fixtureId->save();
 
-        /*foreach(User::all() as $user){
+        /*foreach(Subscription::all() as $user){
             $user->paid = false;
             $user->save();
         }*/
@@ -201,17 +317,16 @@ class FixtureController extends Controller
         $subscription = Subscription::where("user_id", $user->id)->first();
         $subscription->paid = true;
         $admin = Admin::find(1);
+        $book = Book::find(1);
         
         $user->save();
         
         $book = Book::find(1);
 
-        $subscription->balance -= 5;
-        $book->revenue += 5;
+        $subscription->balance -= $book->price;
+        $book->revenue += $book->price;
+        $subscription->paid = true;
         
-        $subscription->paid_day = intval(date("d"));
-        $subscription->paid_hour = intval(date("H"));
-        $subscription->paid_minutes = intval(date("i"));
 
         $book->save();
         $subscription->save();
@@ -252,7 +367,7 @@ class FixtureController extends Controller
             $user->save();
 
             $fixtures = Fixture::where("published_fixtures_id", $fixturesId->published_fixtures_id)->get();
-     
+
             foreach($fixtures as $fixture){
                 if(intval($fixture->hour) > $tempHour){
                     $tempHour = intval($fixture->hour);
@@ -280,24 +395,17 @@ class FixtureController extends Controller
 
             $fixtures = null;
         }
-
-        if((intval(date("d") - $user->signup_day)) > 7){
-            $user->state = "unsubscribed";
-            $user->save();
-
-            return view("unsubscribed", [
-                "subscription" => $subscription
-            ]);
-        }
-
-        if(intval(date("d")) > $subscription->paid_day){
-            if(intval(date("H")) > $subscription->paid_hour && intval(date("i")) > $subscription->paid_minutes){
-                $subscription->paid = false;
-                $subscription->save();
-            }
-        }
         
         if($user->state == "trial"){
+            if((intval(date("d") - $user->signup_day)) > 7){
+                $user->state = "unsubscribed";
+                $user->save();
+
+                return view("unsubscribed", [
+                    "subscription" => $subscription
+                ]);
+            }
+
             return view("free_trial_fixtures", [
                 "fixtures" => $fixtures,
                 "admin" => $admin,

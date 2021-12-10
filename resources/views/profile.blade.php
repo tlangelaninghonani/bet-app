@@ -32,7 +32,7 @@
     </div>
     <div class="header-fixtures">
         <div class="display-flex-space-between">
-            <span class="app-name"><span class="font-kanit">Mabuza</span> BetAssistant</span>
+            <span class="app-name"><span class="app-name-bold">Mabuza</span> BetAssistant</span>
             <span class="material-icons-round" onclick="showHide('menu')">
             more_vert
             </span>
@@ -61,7 +61,7 @@
     </div>
     <div class="container">
         <p>
-            <span style="padding-left: 18px" class="title"><span class="font-kanit">Personal</span> information</span>
+            <span class="title"><span class="font-kanit">Personal</span> information</span>
         </p>
         <p>
             <div class="input-box">
@@ -87,42 +87,6 @@
         </p>
         <p>
             
-        </p>
-        <p>
-            <span style="padding-left: 18px" class="title"><span class="font-kanit">Banking</span> information</span>
-        </p>
-        <p>
-            <div class="input-box">
-                <span class="material-icons-round">
-                payment
-                </span>
-                <input type="text" placeholder="Account holder" value="{{ $banking->bank_name }}">
-                <div class="clear" onclick="clearText('firstteam')">
-                    <span>Clear</span>
-                </div>
-            </div>
-        </p>
-        <p>
-            <div class="input-box">
-                <span class="material-icons-round">
-                account_circle
-                </span>
-                <input type="text" placeholder="Account holder" value="{{ $banking->account_holder }}">
-                <div class="clear" onclick="clearText('firstteam')">
-                    <span>Clear</span>
-                </div>
-            </div>
-        </p>
-        <p>
-            <div class="input-box">
-                <span class="material-icons-round">
-                dialpad
-                </span>
-                <input type="text" placeholder="Account holder" value="{{ $banking->account_number }}">
-                <div class="clear" onclick="clearText('firstteam')">
-                    <span>Clear</span>
-                </div>
-            </div>
         </p>
         <p>
             <button onclick="redirect('/signup')">

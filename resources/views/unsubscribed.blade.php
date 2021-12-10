@@ -23,19 +23,19 @@
             <span class="material-icons-round icon-mid" onclick="redirectBack('')">
             arrow_back
             </span>
-            <span class="app-name"><span class="font-kanit">Mabuza</span> BetAssistant</span>
+            <span class="app-name"><span class="app-name-bold">Mabuza</span> BetAssistant</span>
         </div>
     </div>
     <div class="container">
         <p>
             <div class="text-align-center">
                 <span class="material-icons-round icon-big">
-                error
+                warning
                 </span>
             </div>
         </p>
         <div class="text-align-center">
-            <span>Your account <span class="title">balance</span> is <span class="font-kanit">R{{ number_format($subscription->balance, 2) }}</span>, you need at least <span class="font-kanit">R5.00</span> to get <span class="font-kanit">predictions</span></span>
+            <span>Your account <span class="title">balance</span> is <span class="font-kanit">R{{ number_format($subscription->balance, 2) }}</span>, you need at least <span class="font-kanit">R1.00</span> to get <span class="title">predictions</span></span>
         </div>
         <br>
         @if($subscription->balance < 10 && $subscription->balance >= 5)

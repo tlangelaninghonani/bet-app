@@ -30,6 +30,9 @@
     .fixtures-edit *{
         color: white;
     }
+    input{
+        padding-right: 0;
+    }
 </style>
 <body>
     <div class="banner-home">
@@ -49,6 +52,7 @@
         </div>
     </div>
     <div class="curved-top-home">
+        <div class="shadow-patch"></div>
         <form action="/fixture/{{ Session::get('publishedfixturesid') }}/set" method="POST">
             <input type="hidden" id="outcome" name="outcome">
             @csrf
@@ -133,10 +137,10 @@
                     <p>
                         <div class="display-flex-align">
                             <div class="display-flex-auto">
-                                <div class="truncate" onclick="selectedOutcome(this, 'selected', '{{ Session::get('firstteam') }} win')">
+                                <div onclick="selectedOutcome(this, 'selected', '{{ Session::get('firstteam') }} win')">
                                     <span>{{ Session::get("firstteam") }} win</span>
                                 </div>
-                                <div class="truncate" onclick="selectedOutcome(this, 'selected', '{{ Session::get('secondteam') }} win')"> 
+                                <div onclick="selectedOutcome(this, 'selected', '{{ Session::get('secondteam') }} win')"> 
                                     <span>{{ Session::get("secondteam") }} win</span>
                                 </div>
                             </div>
@@ -165,7 +169,7 @@
                     </div>
                     <p>
                         <div class="display-flex-align">
-                            <div class="predictions-centered">
+                            <div class="display-flex-auto">
                                 <div class="display-flex-align" onclick="selectedOutcome(this, 'selected', 'Over 2.5')">
                                     <span class="material-icons-round">
                                     arrow_upward

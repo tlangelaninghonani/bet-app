@@ -32,7 +32,7 @@
     </div>
     <div class="header-fixtures">
         <div class="display-flex-space-between">
-            <span class="app-name"><span class="font-kanit">Mabuza</span> BetAssistant</span>
+            <span class="app-name"><span class="app-name-bold">Mabuza</span> BetAssistant</span>
             <span class="material-icons-round" onclick="showHide('menu')">
             more_vert
             </span>
@@ -66,25 +66,29 @@
                 <span class="font-kanit">R{{ number_format($subscription->balance, 2) }}</span>
             </div>
         </div>
-        <p>
-            <span class="kanit-font">Enter your <span class="font-kanit-small">ticket number</span> included with your <span class="title">ticket card</span> to top up your account</span>
-        </p>
-        <p>
-            <div class="input-box">
-                <span class="material-icons-round">
-                article
-                </span>
-                <input type="number" name="ticketnumber" placeholder="Ticket number">
-            </div>
-        </p>
-        <p>
-            <button onclick="redirect('/signup')">
-                <span class="material-icons-sharp">
-                published_with_changes
-                </span>
-                <span>Activate ticket</span>
-            </button>
-        </p>
+        <form action="/ticket/activate" method="POST">
+            @csrf
+            @method("POST")
+            <p>
+                <span class="kanit-font">Enter your <span class="font-kanit-small">ticket number</span> included with your <span class="title">ticket card</span> to top up your account</span>
+            </p>
+            <p>
+                <div class="input-box">
+                    <span class="material-icons-round">
+                    article
+                    </span>
+                    <input type="text" name="ticketnumber" placeholder="Ticket number">
+                </div>
+            </p>
+            <p>
+                <button onclick="redirect('/signup')">
+                    <span class="material-icons-sharp">
+                    published_with_changes
+                    </span>
+                    <span>Activate ticket</span>
+                </button>
+            </p>
+        </form>
     </div>
     <!--<div class="container">
         @if($user->state == "trial")

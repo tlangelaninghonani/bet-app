@@ -15,12 +15,13 @@
 </style>
 <body>
     <div class="header-home">
-        <span class="app-name"><span class="font-kanit">Mabuza</span> BetAssistant</span>
+        <span class="app-name"><span class="app-name-bold">Mabuza</span> BetAssistant</span>
     </div>
     <div class="banner-home">
         <img src="https://www.unitedinfocus.com/static/uploads/14/2021/10/GettyImages-1347758654-768x506.jpg" alt="">
     </div>
     <div class="curved-top-home">
+        <div class="shadow-patch"></div>
         <span class="statement">Get the promising <span class="font-kanit-statement">football</span> <span class="title">bet</span> <span class="title">predictions</span> and make that <span class="font-kanit-statement">dream</span> come true</span>
         <p>
             <span class="font-kanit">Predictions featured in</span>

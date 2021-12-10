@@ -18,9 +18,6 @@ class CreateSubscriptionsTable extends Migration
             $table->integer("user_id");
             $table->decimal("balance", 7, 3)->default(0.00);
             $table->boolean("paid")->default(false);
-            $table->integer("paid_day")->nullable();
-            $table->integer("paid_hour")->nullable();
-            $table->integer("paid_minutes")->nullable();
             $table->timestamps();
         });
     }

@@ -48,14 +48,14 @@
                 <span class="app-name">Edit fixture</span>
             </div>
             <p>
-                <div class="display-flex">
-                    <div class="fixture-item">
+                <div class="fixtures-auto">
+                    <div class="fixtures">
                         <div class="display-flex-space-between">
-                            <div class="club-logo truncate">
+                            <div class="club-logo">
                                 <span >{{ $fixture->first_team }} {{ $fixture->first_team_odds }}</span><br>
                             </div>
-                            <span class="font-kanit-small">V</span>
-                            <div class="club-logo truncate">
+                            <span class="font-kanit-small versus">VS</span>
+                            <div class="club-logo">
                                 <span>{{ $fixture->second_team }} {{ $fixture->second_team_odds }}</span>
                             </div>
                         </div>
@@ -79,6 +79,7 @@
         </div>
     </div>
     <div class="curved-top-home">
+        <div class="shadow-patch"></div>
         <form action="/fixture/edit/{{ $fixture->id }}/set" method="POST">
             <input type="hidden" id="outcome" value="{{ $fixture->prediction }}" name="outcome">
             @csrf
@@ -185,7 +186,7 @@
                     </div>
                     <p>
                         <div class="display-flex-space-around">
-                            <div class="text-align-center">
+                            <div class="text-align-center truncate">
                                 <div class="input-box" style="padding: 0 15px;">
                                     <span class="material-icons-sharp">
                                     groups
@@ -203,7 +204,7 @@
                                 </div><br>
                                 <span id="drawodds">Draw</span>
                             </div>
-                            <div class="text-align-center">
+                            <div class="text-align-center truncate">
                                 <div class="input-box" style="padding: 0 15px;">
                                     <span class="material-icons-sharp">
                                     groups
@@ -257,7 +258,7 @@
                     </div>
                     <p>
                         <div class="display-flex-align">
-                            <div class="predictions-centered">
+                            <div class="display-flex-auto">
                                 <div onclick="selectedOutcome(this, 'selected', '{{ $fixture->first_team }} win')">
                                     <span>{{ $fixture->first_team }} win</span>
                                 </div>
@@ -290,7 +291,7 @@
                     </div>
                     <p>
                         <div class="display-flex-align">
-                            <div class="predictions-centered">
+                            <div class="display-flex-auto">
                                 <div class="display-flex-align" onclick="selectedOutcome(this, 'selected', 'Over 2.5')">
                                     <span class="material-icons-round">
                                     arrow_upward

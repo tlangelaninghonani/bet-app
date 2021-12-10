@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSellFixturesTable extends Migration
+class CreateTicketsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateSellFixturesTable extends Migration
      */
     public function up()
     {
-        Schema::create('sell_fixtures', function (Blueprint $table) {
+        Schema::create('tickets', function (Blueprint $table) {
             $table->id();
+            $table->text("ticket_number");
+            $table->boolean("ticket_activated")->default(false);
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateSellFixturesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sell_fixtures');
+        Schema::dropIfExists('tickets');
     }
 }

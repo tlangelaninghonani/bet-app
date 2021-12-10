@@ -23,7 +23,7 @@
     </span>-->
     <div class="header">
         <div class="display-flex-space-between">
-            <span class="app-name"><span class="font-kanit">Mabuza</span> BetAssistant</span>
+            <span class="app-name"><span class="app-name-bold">Mabuza</span> BetAssistant</span>
             <span class="material-icons-round">
             more_vert
             </span>
@@ -64,7 +64,8 @@
         </p>
         <hr>
         @foreach($accounts::all() as $account)
-            <div class="display-flex-align" onclick="redirect('/user/{{ $account->id }}')">
+        <!--onclick="redirect('/user/{{ $account->id }}')"-->
+            <div class="display-flex-align" >
                 <span class="material-icons-round icon-big">
                 account_circle
                 </span>

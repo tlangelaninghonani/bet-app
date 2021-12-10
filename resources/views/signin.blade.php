@@ -15,12 +15,13 @@
 </style>
 <body>
     <div class="header-home">
-        <span class="app-name"><span class="font-kanit">Mabuza</span> BetAssistant</span>
+        <span class="app-name"><span class="app-name-bold">Mabuza</span> BetAssistant</span>
     </div>
     <div class="banner-home">
         <img src="https://imgresizer.eurosport.com/unsafe/1280x960/smart/filters:format(jpeg)/origin-imgresizer.eurosport.com/2021/09/26/3226899-66055248-2560-1440.jpg" alt="">
     </div>
     <div class="curved-top-home">
+        <div class="shadow-patch"></div>
         <div class="display-flex-space-between">
             <span>Sign in to your <span class="font-kanit">account</span></span>
             <span class="material-icons-sharp icon-fixed">
@@ -58,7 +59,6 @@
                     </span>
                 </button>
             </p>
-      
             <p>
                 <button class="signin-google auth-button" type="button" onclick="submitForm('googleauth')">
                     <img class="google-img" src="https://img.icons8.com/color/48/000000/google-logo.png" alt="">

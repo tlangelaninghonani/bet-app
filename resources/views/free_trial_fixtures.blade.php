@@ -33,7 +33,7 @@
     </div>
     <div class="header-fixtures">
         <div class="display-flex-space-between">
-            <span class="app-name"><span class="font-kanit">Mabuza</span> BetAssistant</span>
+            <span class="app-name"><span class="app-name-bold">Mabuza</span> BetAssistant</span>
             <span class="material-icons-round" onclick="showHide('menu')">
             more_vert
             </span>
@@ -128,11 +128,11 @@
                                 </div>-->
                                 <div class="fixture-item">
                                     <div class="display-flex-space-between">
-                                        <div class="club-logo truncate">
+                                        <div class="club-logo">
                                             <span>{{ $fixture->first_team }} {{ $fixture->first_team_odds }}</span>
                                         </div>
                                         <span class="font-kanit-small versus">VS</span>
-                                        <div class="club-logo truncate">
+                                        <div class="club-logo">
                                             <span>{{ $fixture->second_team }} {{ $fixture->second_team_odds }}</span>
                                         </div>
                                     </div>

@@ -19,13 +19,14 @@
             <span class="material-icons-round icon-mid" onclick="redirectBack()">
             arrow_back
             </span>
-            <span class="app-name"><span class="font-kanit">Mabuza</span> BetAssistant</span>
+            <span class="app-name"><span class="app-name-bold">Mabuza</span> BetAssistant</span>
         </div>
     </div>
     <div class="banner-home">
         <img src="https://assets.manutd.com/AssetPicker/images/0/0/15/9/985494/MUFC_v_GCF_97_copy1618529768932_medium.jpg" alt="">
     </div>
     <div class="curved-top-home">
+        <div class="shadow-patch"></div>
         <div class="display-flex-space-between">
             <span>Create a <span class="title">pin</span> for your <span class="font-kanit">account</span></span>
             <span class="material-icons-sharp icon-fixed">

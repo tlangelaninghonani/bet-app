@@ -35,7 +35,7 @@
     </div>
     <div class="header-fixtures">
         <div class="display-flex-space-between">
-            <span class="app-name"><span class="font-kanit">Mabuza</span> BetAssistant</span>
+            <span class="app-name"><span class="app-name-bold">Mabuza</span> BetAssistant</span>
             <span class="material-icons-round" onclick="showHide('menu')">
             more_vert
             </span>
@@ -82,7 +82,10 @@
         </p>
        <p>
            <div class="display-flex-space-around">
-                <div class="text-align-center" onclick="redirect('/fixtures/Double chance')">
+                <div class="text-align-center p-relative" onclick="redirect('/fixtures/Double chance')">
+                    <div class="fixtures-count">
+                        <span class="font-kanit-mid">{{ $doubleChance }}</span>
+                    </div>    
                     <span class="material-icons-round icon-big-shadow">
                     close
                     </span><br>
@@ -90,7 +93,10 @@
                         <span>Double chance</span><br>
                     </p>
                 </div>
-                <div class="text-align-center" onclick="redirect('/fixtures/Take the risk')">
+                <div class="text-align-center p-relative" onclick="redirect('/fixtures/Take the risk')">
+                    <div class="fixtures-count">
+                        <span class="font-kanit-mid">{{ $takeTheRisk }}</span>
+                    </div>    
                     <span class="material-icons-round icon-big-shadow">
                     question_mark
                     </span><br>
@@ -100,7 +106,10 @@
                 </div>
             </div>
             <div class="display-flex-space-around">
-                <div class="text-align-center" onclick="redirect('/fixtures/Both to score')">
+                <div class="text-align-center p-relative" onclick="redirect('/fixtures/Both to score')">
+                    <div class="fixtures-count">
+                        <span class="font-kanit-mid">{{ $bothToScore }}</span>
+                    </div>    
                     <span class="material-icons-round icon-big-shadow">
                     swap_vert
                     </span><br>
@@ -108,7 +117,10 @@
                         <span>Both to score</span><br>
                     </p>
                 </div>
-                <div class="text-align-center" onclick="redirect('/fixtures/2.5 Goals')">
+                <div class="text-align-center p-relative" onclick="redirect('/fixtures/2.5 Goals')">
+                    <div class="fixtures-count">
+                        <span class="font-kanit-mid">{{ $twoFiveGoals }}</span>
+                    </div>
                     <span class="material-icons-round icon-big-shadow">
                     hdr_strong
                     </span><br>
@@ -118,7 +130,10 @@
                 </div>
             </div>
             <div class="display-flex-space-around">
-                <div class="text-align-center" onclick="redirect('/fixtures/1.5 Goals')">
+                <div class="text-align-center p-relative" onclick="redirect('/fixtures/1.5 Goals')">
+                    <div class="fixtures-count">
+                        <span class="font-kanit-mid">{{ $oneFiveGoals }}</span>
+                    </div>    
                     <span class="material-icons-round icon-big-shadow">
                     hdr_weak
                     </span><br>
@@ -126,7 +141,10 @@
                         <span>1.5 Goals</span><br>
                     </p>
                 </div>
-                <div class="text-align-center" onclick="redirect('/fixtures/Sure 2')">
+                <div class="text-align-center p-relative" onclick="redirect('/fixtures/Sure 2')">
+                    <div class="fixtures-count">
+                        <span class="font-kanit-mid">{{ $sureTwo }}</span>
+                    </div>
                     <span class="material-icons-sharp icon-big-shadow">
                     check
                     </span><br>
@@ -136,7 +154,10 @@
                 </div>
             </div>
             <div class="display-flex-space-around">
-                <div class="text-align-center" onclick="redirect('/fixtures/Single combo')">
+                <div class="text-align-center p-relative" onclick="redirect('/fixtures/Single combo')">
+                    <div class="fixtures-count">
+                        <span class="font-kanit-mid">{{ $singleCombo }}</span>
+                    </div>
                     <span class="material-icons-round icon-big-shadow">
                     merge_type
                     </span><br>

@@ -18,14 +18,15 @@ class SignupController extends Controller
 
     public function phoneNumber(Request $req){
         Session::put("phonenumber", $req->phonenumber);
-        return view("banking_details", [
+        return view("pin");
+        /*return view("banking_details", [
             "banks" => array(
                 "Absa Group Limited", "African Bank Limited", "Capitec Bank Limited",
                 "First National Bank", "Discovery Limited", "Bidvest Bank Limited", 
                 "FirstRand Bank", "Investec Bank Limited", "Nedbank Limited", 
                 "Standard Bank of South Africa", "TymeBank"
             )
-        ]);
+        ]);*/
     }
 
     public function googleAuthCallback(){
@@ -55,28 +56,29 @@ class SignupController extends Controller
         Session::put("fullname", $fullName);
         Session::put("phonenumber", $req->phonenumber);
         Session::put("email", strtolower($req->email));
-        return view("banking_details", [
+        return view("pin");
+        /*return view("banking_details", [
             "banks" => array(
                 "Absa Group Limited", "African Bank Limited", "Capitec Bank Limited",
                 "First National Bank", "Discovery Limited", "Bidvest Bank Limited", 
                 "FirstRand Bank", "Investec Bank Limited", "Nedbank Limited", 
                 "Standard Bank of South Africa", "TymeBank"
             )
-        ]);
+        ]);*/
     }
 
     public function banking(Request $req){
-        $accountHolder = ucfirst(strtolower($req->accountholder));
+        /*$accountHolder = ucfirst(strtolower($req->accountholder));
         Session::put("bankname", $req->bankname);
         Session::put("accountholder", strtoupper($accountHolder));
-        Session::put("accountnumber", $req->accountnumber);
+        Session::put("accountnumber", $req->accountnumber);*/
         return view("pin");
     }
 
     public function pin(Request $req){
         if(! Session::get("logged")){
             $user = new User();
-            $banking = new Banking();
+            //$banking = new Banking();
     
             $user->full_name = Session::get("fullname");
             $user->phone_number = Session::get("phonenumber");
@@ -85,11 +87,11 @@ class SignupController extends Controller
             $user->signup_day = intval(date("d"));
             $user->save();
     
-            $banking->user_id = $user->id;
+            /*$banking->user_id = $user->id;
             $banking->account_holder = Session::get("accountholder");
             $banking->bank_name = Session::get("bankname");
             $banking->account_number = Session::get("accountnumber");
-            $banking->save();
+            $banking->save();*/
 
             $subscription = new Subscription();
             $subscription->user_id = $user->id;

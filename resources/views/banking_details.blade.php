@@ -19,13 +19,14 @@
             <span class="material-icons-round icon-mid" onclick="redirectBack()">
             arrow_back
             </span>
-            <span class="app-name"><span class="font-kanit">Mabuza</span> BetAssistant</span>
+            <span class="app-name"><span class="app-name-bold">Mabuza</span> BetAssistant</span>
         </div>
     </div>
     <div class="banner-home">
         <img src="https://gianlucadimarzio.com/images/kane_tottenham_getty_gallery_.jpg?p=intextimg&s=1bee95d2d21d07086ffca5fa7e6ab516" alt="">
     </div>
     <div class="curved-top-home">
+        <div class="shadow-patch"></div>
         <form action="/signup/banking/submit" method="POST">
             @csrf
             @method("POST")

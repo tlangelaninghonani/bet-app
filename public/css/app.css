@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@800&display=swap');
 body{
-    background-color: black;
+    background-color: white;
     overflow: auto;
     margin: 0;
 }
+
+
 
 ::-webkit-scrollbar {
     display: none;
@@ -281,7 +283,7 @@ input:-webkit-autofill::first-line{
     gap: var(--gap);
     background-color: var(--input-silver);
     border-radius: 40px;
-    padding: 0 18px;
+    padding-left: 18px;
 }
 
 .input-box select{
@@ -317,11 +319,21 @@ input:-webkit-autofill {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     z-index: 5000;
-    position: absolute;
+    position: relative;
     left: 0;
     right: 0;
     margin-top: -40px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.shadow-patch{
+    background-color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -15px;
+    z-index: 50000;
+    height: 30px;
 }
 
 .title-mid{
@@ -333,7 +345,7 @@ input:-webkit-autofill {
     top: 0;
     right: 0;
     bottom: 0;
-    width: 70%;
+    width: 50%;
     background-color: white;
     z-index: 10;
     box-shadow: var(--shadow-thick);
@@ -347,7 +359,7 @@ input:-webkit-autofill {
     top: 0;
     right: 0;
     bottom: 0;
-    width: 70%;
+    width: 50%;
     background-color: black;
     z-index: 10;
     box-shadow: var(--shadow);
@@ -399,7 +411,7 @@ input:-webkit-autofill {
 }
 
 .add-fixture{
-    padding: 16px 40px;
+    padding: 16px 30px;
     box-shadow: var(--shadow);
     border-radius: 40px;
     background-color: black;
@@ -598,8 +610,30 @@ hr{
     color: white;
 }
 
+.p-relative{
+    position: relative;
+}
+
+.fixtures-count{
+    position: absolute;
+    top: -8px;
+    right: -5px;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow-thick);
+}
+
+.fixtures-count *{
+    color: white;
+}
+
 .club-logo{
-    
+    white-space: nowrap;
 }
 
 .truncate {
@@ -640,7 +674,7 @@ hr{
 }
 
 .icon-mid{
-    font-size: 35px !important;
+ 
 }
 
 .title-small{
@@ -658,6 +692,11 @@ button *{
 .font-kanit-small{
     font-family: 'Kanit', sans-serif;
     font-size: 20px;
+}
+
+.font-kanit-mid{
+    font-family: 'Kanit', sans-serif;
+    font-size: 25px;
 }
 
 .card{
@@ -711,8 +750,13 @@ button *{
 }
 
 .app-name{
+    font-size: 20px;
+    margin-top: -4px;
+}
+
+.app-name-bold{
+    font-family: 'Kanit', sans-serif;
     font-size: 25px;
-    margin-top: -5px;
 }
 
 .width-100{

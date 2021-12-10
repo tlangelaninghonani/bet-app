@@ -28,11 +28,6 @@
             </span>
         </div>
         <p>
-            <div class="display-flex-align" onclick="redirect('/sell_fixtures')">
-                <span class="title">Sell fixtures</span>
-            </div>
-        </p>
-        <p>
             <div class="display-flex-align" onclick="redirect('/signout')">
                 <span class="title">Sign out</span>
             </div>
@@ -40,7 +35,7 @@
     </div>
     <div class="header">
         <div class="display-flex-space-between">
-            <span class="app-name"><span class="font-kanit">Mabuza</span> BetAssistant</span>
+            <span class="app-name"><span class="app-name-bold">Mabuza</span> BetAssistant</span>
             <span class="material-icons-round" onclick="showHide('menu')">
             more_vert
             </span>

@@ -30,6 +30,15 @@
     .fixtures-edit *{
         color: white;
     }
+
+    .input-box{
+        display: flex;
+        align-items: center;
+        gap: var(--gap);
+        background-color: var(--input-silver);
+        border-radius: 40px;
+        padding: 0 18px;
+    }
 </style>
 <body>
     <div class="banner-home">
@@ -49,6 +58,7 @@
         </div>
     </div>
     <div class="curved-top-home">
+        <div class="shadow-patch"></div>
         <form action="/fixture/{{ $fixtureId }}/add_prediction" method="POST">
             <input type="hidden" id="outcome" name="outcome">
             @csrf
@@ -65,7 +75,7 @@
                 </div>
             </p>
             <div class="text-align-center">
-                <span class="font-kanit">Versus</span>
+                <span class="font-kanit">VS</span>
             </div>
             <p>
                 <div class="input-box">

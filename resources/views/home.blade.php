@@ -26,7 +26,7 @@
             <span class="material-icons-round icon-mid" onclick="redirectBack('')">
             arrow_back
             </span>
-            <span class="app-name"><span class="font-kanit">Mabuza</span> BetAssistant</span>
+            <span class="app-name"><span class="app-name-bold">Mabuza</span> BetAssistant</span>
         </div>
     </div>
     <div class="container">
@@ -38,7 +38,7 @@
             </div>
             <p>
                 <div class="text-align-center">
-                    <span><span class="font-kanit">R5.00</span> will be <span class="title">deducted</span> from your <span class="font-kanit">balance</span></span>
+                    <span><span class="font-kanit">R{{ number_format($book->price, 2) }}</span> will be <span class="title">deducted</span> from your <span class="font-kanit">balance</span></span>
                 </div>
             </p>
         <form class="display-none" action="/purchase" id="purchaseform" method="POST">

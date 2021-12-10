@@ -26,6 +26,7 @@
         <img src="https://assets.manutd.com/AssetPicker/images/0/0/15/9/985494/MUFC_v_GCF_97_copy1618529768932_medium.jpg" alt="">
     </div>
     <div class="curved-top-home">
+        <div class="shadow-patch"></div>
         <form action="/signup/pin" method="POST">
             @csrf
             @method("POST")
