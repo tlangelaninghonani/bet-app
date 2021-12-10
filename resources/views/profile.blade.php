@@ -40,7 +40,7 @@
             more_vert
             </span>
         </div>
-        <div class="nav">
+        <div class="display-flex-space-between">
             <div class="text-align-center" onclick="redirect('/football_categories')">
                 <span class="material-icons-round">
                 sports_soccer

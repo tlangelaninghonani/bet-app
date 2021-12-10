@@ -35,12 +35,13 @@
     </div>
     <div class="header-fixtures">
         <div class="display-flex-space-between">
-            <span class="app-name"><span class="app-name-bold">Football categories</span></span>
+            <span class="app-name"><span class="app-name-bold">Mabuza</span> BetAssistant</span>
             <span class="material-icons-round" onclick="showHide('menu')">
             more_vert
             </span>
         </div>
-        <div class="nav">
+        <br>
+        <div class="display-flex-space-between">
             <div class="text-align-center" onclick="redirect('/football_categories')">
                 <span class="material-icons-round">
                 sports_soccer

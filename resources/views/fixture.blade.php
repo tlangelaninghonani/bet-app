@@ -22,7 +22,6 @@
         align-items: center;
         gap: var(--gap);
         background-color: var(--input-silver);
-        border-radius: 40px;
         padding: 0 18px;
     }
 </style>

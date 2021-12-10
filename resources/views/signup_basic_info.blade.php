@@ -19,7 +19,7 @@
             <span class="material-icons-round icon-mid" onclick="redirectBack()">
             arrow_back
             </span>
-            <span class="app-name"><span class="app-name-bold">Personal info</span></span>
+            <span class="app-name"><span class="app-name-bold">Mabuza</span> BetAssistant</span>
         </div>
     </div>
     <div class="banner-home">
