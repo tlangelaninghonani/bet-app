@@ -16,6 +16,9 @@
     *{
         color: black;
     }
+    .input-box{
+        padding: 0 18px;
+    }
 </style>
 <body>
     <div class="menu-black" id="menu">
