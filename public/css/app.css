@@ -806,8 +806,6 @@ button *{
     background-color: var(--primary-color);
     padding: var(--padding);
     box-shadow: var(--shadow);
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
 }
 
 .header *{
@@ -818,8 +816,6 @@ button *{
     background-color: var(--primary-color);
     padding: var(--padding);
     box-shadow: var(--shadow);
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
 }
 
 .header-fixtures *{
