@@ -18,13 +18,22 @@
     }
 </style>
 <body>
-    <!--<span class="material-icons-round icon-float">
-    verified
-    </span>-->
+    <div class="menu" id="menu">
+        <div class="display-flex-end">
+            <span class="material-icons-round" onclick="showHide('menu')">
+            close
+            </span>
+        </div>
+        <p>
+            <div class="display-flex-align" onclick="redirect('/signout')">
+                <span class="title">Sign out</span>
+            </div>
+        </p>
+    </div>
     <div class="header">
         <div class="display-flex-space-between">
             <span class="app-name"><span class="app-name-bold">Mabuza</span> BetAssistant</span>
-            <span class="material-icons-round">
+            <span class="material-icons-round" onclick="showHide('menu')">
             more_vert
             </span>
         </div>
@@ -62,7 +71,6 @@
                 <input type="text" name="search" placeholder="Search for an account">
             </div>
         </p>
-        <hr>
         @foreach($accounts::all() as $account)
         <!--onclick="redirect('/user/{{ $account->id }}')"-->
             <div class="display-flex-align" >

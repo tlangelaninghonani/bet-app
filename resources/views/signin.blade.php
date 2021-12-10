@@ -24,7 +24,7 @@
         <div class="shadow-patch"></div>
         <div class="display-flex-space-between">
             <span>Sign in to your <span class="font-kanit">account</span></span>
-            <span class="material-icons-sharp icon-fixed">
+            <span class="material-icons-sharp icon-fixed primary-color">
             account_circle
             </span>
         </div>
