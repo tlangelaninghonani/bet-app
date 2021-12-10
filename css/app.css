@@ -379,23 +379,11 @@ input:-webkit-autofill {
 }
 
 .new-fixture{
-    padding: 16px 30px;
-    box-shadow: var(--shadow-thick);
-    border-radius: 40px;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    margin: var(--padding);
-    z-index: 50;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: var(--gap);
-}
-
-.new-fixture *{
-    color: black;
+    padding: 16px;
+    box-shadow: var(--shadow);
+    border-radius: 50%;
+    background-color: black !important;
+    color: white;
 }
 
 .dashboard{

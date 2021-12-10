@@ -33,9 +33,9 @@
         <div class="display-flex-space-between">
             <div class="text-align-center" onclick="redirect('/admin')">
                 <span class="material-icons-round">
-                dashboard
+                home
                 </span><br>
-                <span>Dashboard</span>
+                <span>Home</span>
             </div>
             <div class="text-align-center" onclick="redirect('/admin_fixtures')">
                 <span class="material-icons-round">
@@ -48,6 +48,10 @@
                 people
                 </span><br>
                 <span>Accounts</span>
+            </div>
+            <span class="material-icons-round new-fixture" onclick="submitForm('newfixtureform')">
+            add
+            </span>
             </div>
         </div>
     </div>
@@ -284,12 +288,12 @@
                 @csrf
                 @method("POST")
             </form>
-            <div class="new-fixture" onclick="submitForm('newfixtureform')">
+            <!--<div class="new-fixture" onclick="submitForm('newfixtureform')">
                 <span class="material-icons-round">
                 add
                 </span>
                 <span>New fixtures</span>
-            </div>
+            </div>-->
         @endif
         @foreach($fixtures as $fixture)
             <div class="fixtures-auto">
