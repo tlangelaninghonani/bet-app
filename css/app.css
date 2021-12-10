@@ -505,7 +505,7 @@ img{
 }
 
 button{
-    padding: 16px;
+    padding: 18px;
     width: 100%;
     background-color: var(--primary-color);
     display: flex;
