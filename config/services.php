@@ -32,7 +32,7 @@ return [
     'google' => [
         'client_id' => "776844087043-j9lvbifsdfgg1d641gqeml6h8j1lql1h.apps.googleusercontent.com",
         'client_secret' => "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",
-        'redirect' => "http://mabuza-app.herokuapp.com0/google_auth_callback"
+        'redirect' => "https://mabuza-app.herokuapp.com/google_auth_callback"
     ],
     'facebook' => [
         'client_id' => '478941016752764',
