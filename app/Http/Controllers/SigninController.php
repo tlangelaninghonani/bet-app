@@ -19,6 +19,8 @@ class SigninController extends Controller
                 return redirect("/football_categories");
             }
         }
-        return back();
+        return view("error", [
+            "error" => "signin"
+        ]);
     }
 }

@@ -52,6 +52,27 @@
                 </button>
             </p>
         @endif
+        @if($error == "signup")
+            <form class="display-none" id="googleauth" action="/google_auth" method="POST">
+                @csrf
+                @method("POST")
+            </form>
+            <span class="title">Account doesn't seem to already <span class="font-kanit">exists</span></span>
+            <p>
+                <button >
+                    <span class="material-icons-round" onclick="redirect('/signup')">
+                    account_circle
+                    </span>
+                    <span>Sign up instead</span>
+                </button>
+            </p>
+            <p>
+                <button class="signin-google auth-button" type="button" onclick="submitForm('googleauth')">
+                    <img class="google-img" src="https://img.icons8.com/color/48/000000/google-logo.png" alt="">
+                    <span>Sign up with Google</span>
+                </button>
+            </p>
+        @endif
         <br>
     </div>
 </body>
