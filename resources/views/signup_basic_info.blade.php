@@ -47,7 +47,7 @@
                     <span class="material-icons-sharp">
                     account_circle
                     </span>
-                    <input type="text" name="fullname" placeholder="Full name" required>
+                    <input class="clear-input" type="text" name="fullname" placeholder="Full name" required>
                 </div>
             </p>
             <p>
@@ -89,7 +89,7 @@
                         <span class="material-icons-round">
                         call
                         </span>
-                        <input type="number" name="phonenumber" maxlength="10" minlength="10" placeholder="Phone number">
+                        <input class="clear-input" type="number" name="phonenumber" maxlength="10" minlength="10" placeholder="Phone number">
                     </div>
                 </p>
             </div>
@@ -99,7 +99,7 @@
                         <span class="material-icons-round">
                         email
                         </span>
-                        <input type="email" name="email" placeholder="Email">
+                        <input class="clear-input" type="email" name="email" placeholder="Email">
                     </div>
                 </p>
             </div>
@@ -129,8 +129,8 @@
     </div>
     <script>
        setTimeout(() => {
-            for (let i = 0; i < document.querySelectorAll("input").length; i++) {
-                const element = document.querySelectorAll("input")[i];
+            for (let i = 0; i < document.querySelectorAll(".clear-input").length; i++) {
+                const element = document.querySelectorAll(".clear-input")[i];
                 element.value = "";
             }   
        }, 600);

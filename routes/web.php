@@ -34,6 +34,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/free_trial', function () {
+    if(Session::has("freetrial")){
+        $user = User::find(Session::get("userid"));
+        return view("free_trial", [
+            "user" => $user
+        ]);
+    }else{
+        abort(404);
+    }
+});
+
 Route::post('/signup/info', [App\Http\Controllers\SignupController::class, "info"]);
 Route::post('/signup/banking/submit', [App\Http\Controllers\SignupController::class, "banking"]);
 Route::post('/signup/pin', [App\Http\Controllers\SignupController::class, "pin"]);

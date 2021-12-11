@@ -21,6 +21,10 @@
     --header-bottom-padding: 80px;
 }
 
+.primary-color-header{
+    background-color: var(--primary-color-header) !important;
+}
+
 *{
     color: var(--secondary-color) !important;
     font-family: 'Montserrat', sans-serif;
@@ -674,14 +678,13 @@ hr{
     top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     padding: var(--padding);
-    background-color: rgba(0, 0, 0, .7);
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
+    background-color: rgba(255, 225, 199, .1);
 }
 
 .fixtures-edit *{
-    color: white;
+    color: var(--body-color) !important;
 }
 
 .white-button{

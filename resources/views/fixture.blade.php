@@ -51,7 +51,7 @@
             <span class="title">Setup a <span class="font-kanit">fixture</span></span>
             <p>
                 <div class="input-box">
-                    <span class="material-icons-sharp primary-color-text">
+                    <span class="material-icons-sharp">
                     groups
                     </span>
                     <input type="text" style="text-transform: capitalize" id="firstteam" name="firstteam" placeholder="First team" required>
@@ -62,7 +62,7 @@
             </div>
             <p>
                 <div class="input-box">
-                    <span class="material-icons-sharp primary-color-text">
+                    <span class="material-icons-sharp">
                     groups
                     </span>
                     <input type="text" style="text-transform: capitalize" id="secondteam" name="secondteam" placeholder="Second team" required>

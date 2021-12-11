@@ -101,9 +101,10 @@ class SignupController extends Controller
     
             Session::put("userid", $user->id);
             Session::put("logged", true);
-            return view("free_trial", [
-                "user" => $user
-            ]);
+
+            Session::put("freetrial", true);
+
+            return redirect("/free_trial");
         }
         return back();
     }

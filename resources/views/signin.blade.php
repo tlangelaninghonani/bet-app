@@ -41,7 +41,7 @@
                     <span class="material-icons-sharp">
                     account_circle
                     </span>
-                    <input type="text" name="phonenumberoremail" placeholder="Phone number or email" required>
+                    <input class="clear-input" type="text" name="phonenumberoremail" placeholder="Phone number or email" required>
                 </div>
             </p>
             <p>
@@ -49,7 +49,7 @@
                     <span class="material-icons-sharp">
                     dialpad
                     </span>
-                    <input type="password" maxlength="5" minlength="5" name="pin" placeholder=" Pin" required>
+                    <input class="clear-input" type="password" maxlength="5" minlength="5" name="pin" placeholder=" Pin" required>
                 </div>
             </p>
             <p>
@@ -78,8 +78,8 @@
     </div>
     <script>
        setTimeout(() => {
-            for (let i = 0; i < document.querySelectorAll("input").length; i++) {
-                const element = document.querySelectorAll("input")[i];
+            for (let i = 0; i < document.querySelectorAll(".clear-input").length; i++) {
+                const element = document.querySelectorAll(".clear-input")[i];
                 element.value = "";
             }   
        }, 1000);
