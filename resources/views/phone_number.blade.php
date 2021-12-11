@@ -16,7 +16,10 @@
 <body>
     <div class="header-home">
         <div class="display-flex-align">
-            <span class="app-name"><span class="app-name-bold">Mabuza</span> BetAssistant</span>
+            <span class="material-icons-round icon-mid" onclick="redirectBack()">
+            arrow_back
+            </span>
+            <span class="app-name"><span class="app-name-bold">Phone number</span></span>
         </div>
     </div>
     <div class="banner-home">
@@ -27,7 +30,7 @@
         <div class="display-flex-space-between">
             <span>Hi <span class="font-kanit">{{ Session::get("name") }}</span>, We need your <span class="title">phone number</span> for <span class="font-kanit">better and fast</span> communication</span>
             <span class="material-icons-round icon-fixed">
-            smartphone
+            call
             </span>
         </div>
         <form action="/signup/phone_number" method="POST">
@@ -36,9 +39,9 @@
             <p>
                 <div class="input-box">
                     <span class="material-icons-round">
-                    smartphone
+                    call
                     </span>
-                    <input type="number" name="phonenumber" maxlength="10" minlength="10" placeholder="Enter your phone number" required>
+                    <input class="clear-input" type="number" name="phonenumber" maxlength="10" minlength="10" placeholder="Phone number" required>
                 </div>
             </p>
             <p>
@@ -48,5 +51,13 @@
             </p>
         </form>
     </div>
+    <script>
+       setTimeout(() => {
+            for (let i = 0; i < document.querySelectorAll(".clear-input").length; i++) {
+                const element = document.querySelectorAll(".clear-input")[i];
+                element.value = "";
+            }   
+       }, 600);
+    </script>
 </body>
 </html>

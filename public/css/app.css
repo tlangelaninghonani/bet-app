@@ -45,7 +45,9 @@
     display: flex;
     align-items: center;
     gap: var(--gap);
+    background-color: white !important;
 }
+
 
 .display-none{
     display: none;
@@ -711,6 +713,7 @@ hr{
     box-shadow: var(--shadow);
     padding: 30px;
     border-radius: 50%;
+    background-color: white !important;
 }
 
 .icon-mid{
@@ -800,6 +803,8 @@ button *{
 
 .header-plain{
     padding: var(--padding);
+    padding-bottom: var(--header-bottom-padding);
+    background-color: var(--primary-color-header);
 }
 
 .app-name{

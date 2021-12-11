@@ -82,7 +82,7 @@
                 const element = document.querySelectorAll(".clear-input")[i];
                 element.value = "";
             }   
-       }, 1000);
+       }, 600);
     </script>
 </body>
 </html>

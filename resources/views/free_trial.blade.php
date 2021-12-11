@@ -23,10 +23,7 @@
 <body>
     <div class="header-plain">
         <div class="display-flex-align">
-            <span class="material-icons-round icon-mid" onclick="redirectBack()">
-            arrow_back
-            </span>
-            <span class="app-name"><span class="app-name-bold">Mabuza</span> BetAssistant</span>
+            <span class="app-name"><span class="app-name-bold" style="color: black !important">Free trial</span></span>
         </div>
     </div>
     <div class="container">
@@ -46,6 +43,7 @@
                 <span>Get the predictions</span>
             </button>
         </p>
+        <br>
     </div>
 </body>
 </html>

@@ -11,14 +11,18 @@
     --gap: 10px;
     --shadow-thick: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     --shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-    --primary-color: rgb(0, 126, 0);
-    --secondary-color: rgb(5, 5, 5);
+    --primary-color: rgb(0, 82, 0);
+    --secondary-color: rgb(20, 20, 20);
     --faint-primary-color: #c9dbf8;
     --primary-color-header: rgb(255, 225, 199);
     --primary-color-header-color: rgb(0, 0, 0);
     --padding-header: var(--padding);
-    --body-color: rgb(255, 253, 250);
+    --body-color: rgb(255, 250, 244);
     --header-bottom-padding: 80px;
+}
+
+.primary-color-header{
+    background-color: var(--primary-color-header) !important;
 }
 
 *{
@@ -41,7 +45,9 @@
     display: flex;
     align-items: center;
     gap: var(--gap);
+    background-color: white !important;
 }
+
 
 .display-none{
     display: none;
@@ -180,7 +186,7 @@ input:focus ,select:focus{
 }
 
 .selected{
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color) !important;
 }
 
 .selected *{
@@ -192,6 +198,7 @@ input:focus ,select:focus{
     box-shadow: var(--shadow);
     white-space: nowrap;
     border-radius: 40px;
+    background-color: white;
 }
 
 .betting-companies{
@@ -464,11 +471,16 @@ input:-webkit-autofill {
 }
 
 .icon-fixed{
-    padding: 18px;
-    background-color: var(--primary-color);
-    color: white !important;
+    position: absolute;
+    left: 50%;
+    top: -30%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    background-color: var(--primary-color-header) !important;
+    color: var(--primary-color) !important;
     box-shadow: var(--shadow);
-    border-radius: 40px;
+    border-radius: 50%;
+    font-size: 30px !important;
 }
 
 .curved-top *{
@@ -477,9 +489,8 @@ input:-webkit-autofill {
 
 img{
     object-fit: cover;
-    filter: brightness(50%);
+    filter: brightness(30%);
 }
-
 
 .google-img{
     filter: brightness(100%);
@@ -498,7 +509,17 @@ img{
 
 .banner-home{
     height: 300px;
-    
+    position: relative;
+}
+
+.banner-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255, 250, 244, .1);
+    z-index: 2;
 }
 
 .banner-home img{
@@ -659,14 +680,13 @@ hr{
     top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     padding: var(--padding);
-    background-color: rgba(0, 0, 0, .7);
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
+    background-color: rgba(255, 225, 199, .1);
 }
 
 .fixtures-edit *{
-    color: white;
+    color: var(--body-color) !important;
 }
 
 .white-button{
@@ -693,6 +713,7 @@ hr{
     box-shadow: var(--shadow);
     padding: 30px;
     border-radius: 50%;
+    background-color: white !important;
 }
 
 .icon-mid{
@@ -782,6 +803,8 @@ button *{
 
 .header-plain{
     padding: var(--padding);
+    padding-bottom: var(--header-bottom-padding);
+    background-color: var(--primary-color-header);
 }
 
 .app-name{
