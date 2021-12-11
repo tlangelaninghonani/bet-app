@@ -52,7 +52,7 @@
                 </button>
             </p>
         @endif
-        @if($error == "signup")
+        @if($error == "signin")
             <form class="display-none" id="googleauth" action="/google_auth" method="POST">
                 @csrf
                 @method("POST")
