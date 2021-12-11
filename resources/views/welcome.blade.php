@@ -14,6 +14,9 @@
     }
 </style>
 <body>
+    <div id="logo" class="logo">
+        <span class="app-name"><span class="app-name-bold">Mabuza BetAssistant</span></span>
+    </div>
     <div class="header-home">
         <span class="app-name"><span class="app-name-bold">Mabuza BetAssistant</span></span>
     </div>
@@ -79,6 +82,11 @@
                 <span>Get started</span>
             </button>
         </p>
+        <script>
+            setTimeout(() => {
+                document.querySelector("#logo").style.display = "none";
+            }, 5000);
+        </script>
     </div>
 </body>
 </html>
