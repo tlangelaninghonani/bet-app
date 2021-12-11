@@ -39,7 +39,7 @@
             <span class="title">Account seems to already <span class="font-kanit">exists</span></span>
             <p>
                 <button >
-                    <span class="material-icons-round" >
+                    <span class="material-icons-round" onclick="redirect('/signin')">
                     account_circle
                     </span>
                     <span>Sign in instead</span>
