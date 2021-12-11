@@ -50,6 +50,7 @@ Route::post('/signup/info', [App\Http\Controllers\SignupController::class, "info
 Route::post('/signup/banking/submit', [App\Http\Controllers\SignupController::class, "banking"]);
 Route::post('/signup/pin', [App\Http\Controllers\SignupController::class, "pin"]);
 Route::get('/account', [App\Http\Controllers\ProfileController::class, "index"]);
+Route::post('/account/update', [App\Http\Controllers\ProfileController::class, "update"]);
 Route::post('/fixture/{fixtureId}/set', [App\Http\Controllers\FixtureController::class, "fixture"]);
 Route::post('/fixture/{fixtureId}/add_prediction', [App\Http\Controllers\FixtureController::class, "addPrediction"]);
 Route::get('/admin_fixtures', [App\Http\Controllers\FixtureController::class, "adminFixtures"]);

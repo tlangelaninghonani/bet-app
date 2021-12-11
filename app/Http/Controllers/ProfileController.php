@@ -20,4 +20,14 @@ class ProfileController extends Controller
             "banking" => $banking
         ]);
     }
+
+    public function update(Request $req){
+        $user = User::find(Session::get("userid"));
+        $user->full_name = $req->fullname;
+        $user->phone_number = $req->phonenumber;
+        $user->email = $req->email;
+        $user->save();
+
+        return back();
+    }
 }

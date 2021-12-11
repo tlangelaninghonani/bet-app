@@ -47,6 +47,14 @@ class SignupController extends Controller
             return view("phone_number");
 
         }else{
+            $token = Socialite::driver('google')->user();
+            if(User::where("email", $token->email)->exists()){
+                $user = User::where("email", $token->email)->first();
+                Session::put("userid", $user->id);
+                Session::put("logged", true);
+    
+                return redirect("/football_categories");
+            }
             return view("phone_number");
         }
     }
@@ -56,6 +64,18 @@ class SignupController extends Controller
         Session::put("fullname", $fullName);
         Session::put("phonenumber", $req->phonenumber);
         Session::put("email", strtolower($req->email));
+        foreach(User::all() as $user){
+            if($user->phone_number == $req->phonenumber){
+                return view("error", [
+                    "error" => "signup"
+                ]);
+            }
+            if($user->email == $req->email){
+                return view("error", [
+                    "error" => "signup"
+                ]);
+            }
+        }
         return view("pin");
         /*return view("banking_details", [
             "banks" => array(

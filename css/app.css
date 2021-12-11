@@ -10,8 +10,8 @@
     --padding: 15px;
     --gap: 10px;
     --shadow-thick: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    --shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-    --primary-color: rgb(0, 82, 0);
+    --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    --primary-color: rgb(0, 51, 0);
     --secondary-color: rgb(20, 20, 20);
     --faint-primary-color: #c9dbf8;
     --primary-color-header: rgb(255, 225, 199);
@@ -21,9 +21,6 @@
     --header-bottom-padding: 80px;
 }
 
-.primary-color-header{
-    background-color: var(--primary-color-header) !important;
-}
 
 *{
     color: var(--secondary-color) !important;
@@ -230,6 +227,7 @@ input:focus ,select:focus{
     display: flex;
     align-items: center;
     gap: var(--gap);
+    background-color: white !important;
 }
 
 .predictions{
@@ -274,12 +272,11 @@ input:-webkit-autofill::first-line{
 }
 
 .curved-top-plain{
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
     background-color: var(--secondary-color);
     padding: var(--padding);
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    
+    box-shadow: var(--shadow);
 }
 
 .curved-top-plain *{
@@ -332,20 +329,20 @@ input:-webkit-autofill {
     height: 100%;
     padding: var(--padding);
     overflow: auto;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    box-shadow: var(--shadow);
 }
 
 .curved-top-home{
     background-color: var(--body-color);
     padding: var(--padding);
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
     z-index: 5000;
     position: relative;
     left: 0;
     right: 0;
     margin-top: -40px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    box-shadow: var(--shadow);
 }
 
 .shadow-patch{
@@ -543,6 +540,7 @@ button{
     border: none;
     color: white !important;
     border-radius: 40px;
+    box-shadow: var(--shadow-thick);
 }
 
 .display-flex-end{
@@ -716,8 +714,21 @@ hr{
     background-color: white !important;
 }
 
+.primary-color-header{
+    background-color: var(--primary-color-header) !important;
+}
+
+.primary-color-header-text{
+    color: var(--primary-color-header) !important;
+}
+
+.primary-color-header-text *{
+    color: black !important;
+}
+
 .icon-mid{
- 
+    font-size: 30px !important;
+    padding-right: 10px;
 }
 
 .title-small{

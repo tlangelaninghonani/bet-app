@@ -64,33 +64,50 @@
     </div>
     <div class="container">
         <div class="shadow-patch"></div>
-        <p>
-            <span class="title"><span class="font-kanit">Personal</span> information</span>
-        </p>
-        <p>
-            <div class="input-box">
+        <form action="/account/update" method="POST">
+            @csrf
+            @method("POST")
+            <p>
+                <span class="title"><span class="font-kanit">Personal</span> information</span>
+            </p>
+            <p>
+                <div class="input-box">
+                    <span class="material-icons-round">
+                    account_circle
+                    </span>
+                    <input type="text" placeholder="Full name" name="fullname" value="{{ $user->full_name }}">
+                </div>
+            </p>
+            <p>
+                <div class="input-box">
+                    <span class="material-icons-round">
+                    call
+                    </span>
+                    <input type="number" placeholder="Phone number" name="phonenumber" value="{{ $user->phone_number }}">
+                </div>
+            </p>
+            <div class="display-flex">
                 <span class="material-icons-round">
-                account_circle
+                info
                 </span>
-                <input type="text" placeholder="Enter your fullname" value="{{ $user->full_name }}">
+                <small>Update on phone number also updates <span class="font-kanit-small">sign in</span> phone number</small>
             </div>
-        </p>
-        <p>
-            <div class="input-box">
-                <span class="material-icons-round">
-                call
-                </span>
-                <input type="number" placeholder="Enter your phone number" value="{{ $user->phone_number }}">
-            </div>
-        </p>
-        <p>
-            
-        </p>
-        <p>
-            <button onclick="redirect('/signup')">
-                <span>Save changes</span>
-            </button>
-        </p>
+            @if($user->email != "")
+                <p>
+                    <div class="input-box">
+                        <span class="material-icons-round">
+                        email
+                        </span>
+                        <input type="email" placeholder="Email" name="email" value="{{ $user->email }}">
+                    </div>
+                </p>
+            @endif
+            <p>
+                <button>
+                    <span>Save changes</span>
+                </button>
+            </p>
+        </form>
     </div>
 </body>
 </html>

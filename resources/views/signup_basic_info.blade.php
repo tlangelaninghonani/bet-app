@@ -73,8 +73,10 @@
 
                     if(mode == "phone"){
                         document.querySelector("#phone").style.display = "block";
+                        document.querySelector("#phone").value = "";
                     }else{
                         document.querySelector("#email").style.display = "block";
+                        document.querySelector("#email").value = "";
                     }
                     for (let i = 0; i < document.querySelectorAll(".selected").length; i++) {
                         const element = document.querySelectorAll(".selected")[i];
@@ -133,7 +135,7 @@
                 const element = document.querySelectorAll(".clear-input")[i];
                 element.value = "";
             }   
-       }, 600);
+       }, 1000);
     </script>
 </body>
 </html>
